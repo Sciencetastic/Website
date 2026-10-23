@@ -530,7 +530,8 @@
   "err_B": 1389
  },
  "Angular_Death_1": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Alch_ANGULAR.png",
   "cropped_to_viewport": false
  },
  "Black_BG": {
@@ -538,39 +539,48 @@
   "cropped_to_viewport": false
  },
  "CU1": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "CU/CU1.png",
   "cropped_to_viewport": false
  },
  "CU4": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "CU/CU4.png",
   "cropped_to_viewport": false
  },
  "CU5": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "CU/CU5.png",
   "cropped_to_viewport": false
  },
  "Cellar_Candle_Death": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Village_Cellar/Cellar_Candle_Death.png",
   "cropped_to_viewport": false
  },
  "Face_Eaten": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Alch_Face_Eaten.png",
   "cropped_to_viewport": false
  },
  "Fall_Backswitch": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Forest_SwitchBack/Player_Fall.png",
   "cropped_to_viewport": false
  },
  "Forest_Cave_Death_F1": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Cave_In/Forest_Cave_Death_Frame1.png",
   "cropped_to_viewport": false
  },
  "Forest_Cave_Death_F3": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Cave_In/Forest_Cave_Death_Frame3.png",
   "cropped_to_viewport": false
  },
  "Forest_Cave_Death_f2": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Cave_In/Forest_Cave_Death_Frame2.png",
   "cropped_to_viewport": false
  },
  "Gameboy Graphic": {
@@ -578,95 +588,118 @@
   "cropped_to_viewport": false
  },
  "Inventory UI_Blank": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_Diary_Page": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_FOLIO_Journal_Select": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_FOLIO_select_blank": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_KEYS_select_blank": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_LARGE_select": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_LARGE_select2": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_Notes_Select": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_SMALL_select_blank": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Inventory UI_TOOLS_select_blank": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
   "cropped_to_viewport": false
  },
  "Market_Place_Death": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Market_Place_Death.png",
   "cropped_to_viewport": false
  },
  "Mine_Death": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Mine_Death.png",
   "cropped_to_viewport": false
  },
  "Mine_Temple_Flame_death": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/Mine_Temple_ flame_Death.png",
   "cropped_to_viewport": false
  },
  "Opening_1": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Opening/Opening_1.png",
   "cropped_to_viewport": false
  },
  "Opening_2": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Opening/Opening_2.png",
   "cropped_to_viewport": false
  },
  "Opening_3": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Opening/Opening_3.png",
   "cropped_to_viewport": false
  },
  "Opening_4": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Opening/Opening_4.png",
   "cropped_to_viewport": false
  },
  "Opening_5": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Opening/Opening_5.png",
   "cropped_to_viewport": false
  },
  "VillageValley": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Forest_Deer_Cliff/Background6VillageValley.png",
   "cropped_to_viewport": true
  },
  "Village_Black_Smith": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Village_BlackSmith/Village_Black_Smith_Background.png",
   "cropped_to_viewport": true
  },
  "Village_Work_Bench": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Village_Alchemist_Int_WorkBench/Village_Work_Bench_Background.png",
   "cropped_to_viewport": true
  },
  "alchemist_house": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Village_Alchemist_House/Village_Alchemist_Ext.png",
   "cropped_to_viewport": true
  },
  "alchemist_house_door_open": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Village_Alchemist_House/Village_Alchemist_Door_Open.png",
   "cropped_to_viewport": true
  },
  "black": {
@@ -674,19 +707,23 @@
   "cropped_to_viewport": false
  },
  "logo": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Title/Title_title.png",
   "cropped_to_viewport": false
  },
  "tentacle_Death": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Tentacle_Grab_2/1_0022_Layer-2.png",
   "cropped_to_viewport": false
  },
  "titlescreen": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Title/Title_BG_1.png",
   "cropped_to_viewport": false
  },
  "wolf_bite": {
-  "method": "theme_fallback",
+  "method": "reference_palette",
+  "reference": "Deaths/wolf_bite.png",
   "cropped_to_viewport": false
  }
 }
