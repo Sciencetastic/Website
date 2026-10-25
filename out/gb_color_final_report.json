@@ -7,7 +7,8 @@
    3
   ],
   "err_A": 7352,
-  "err_B": 2727
+  "err_B": 2727,
+  "backdrop": "black (forced for audit scripts)"
  },
  "burnt_bedroom": {
   "method": "B_direct",
@@ -37,7 +38,8 @@
    10
   ],
   "err_A": 18742,
-  "err_B": 3884
+  "err_B": 3884,
+  "backdrop": "black (forced for audit scripts)"
  },
  "collapsed-barn": {
   "method": "B_direct",
@@ -57,7 +59,8 @@
    10
   ],
   "err_A": 1737,
-  "err_B": 732
+  "err_B": 732,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Forest_Briar": {
   "method": "B_direct",
@@ -67,7 +70,8 @@
    8
   ],
   "err_A": 13020,
-  "err_B": 3072
+  "err_B": 3072,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Forest_Briar_nocut": {
   "method": "B_direct",
@@ -77,7 +81,8 @@
    8
   ],
   "err_A": 16814,
-  "err_B": 3072
+  "err_B": 3072,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Forest_inside_watchtower_Dark": {
   "method": "B_direct",
@@ -107,7 +112,8 @@
    8
   ],
   "err_A": 5800,
-  "err_B": 2724
+  "err_B": 2724,
+  "backdrop": "black (forced for audit scripts)"
  },
  "inside_cave": {
   "method": "B_direct",
@@ -207,7 +213,8 @@
    7
   ],
   "err_A": 21437,
-  "err_B": 638
+  "err_B": 638,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Outside_Cave_Wolf": {
   "method": "B_direct",
@@ -217,7 +224,8 @@
    9
   ],
   "err_A": 6010,
-  "err_B": 909
+  "err_B": 909,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Outside_Cave_Wolf_Dead": {
   "method": "B_direct",
@@ -227,7 +235,8 @@
    10
   ],
   "err_A": 32815,
-  "err_B": 1031
+  "err_B": 1031,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Priest_House": {
   "method": "B_direct",
@@ -267,7 +276,8 @@
    10
   ],
   "err_A": 3698,
-  "err_B": 2180
+  "err_B": 2180,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Tavern": {
   "method": "B_direct",
@@ -427,7 +437,8 @@
    10
   ],
   "err_A": 9589,
-  "err_B": 643
+  "err_B": 643,
+  "backdrop": "black (forced for audit scripts)"
  },
  "village_merch_bedroom": {
   "method": "B_direct",
@@ -457,7 +468,8 @@
    10
   ],
   "err_A": 8715,
-  "err_B": 1298
+  "err_B": 1298,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Village_Tavern": {
   "method": "B_direct",
@@ -517,7 +529,8 @@
    1
   ],
   "err_A": 37496,
-  "err_B": 2641
+  "err_B": 2641,
+  "backdrop": "black (forced for audit scripts)"
  },
  "watchtower_Tower": {
   "method": "B_direct",
@@ -527,7 +540,8 @@
    7
   ],
   "err_A": 30606,
-  "err_B": 1389
+  "err_B": 1389,
+  "backdrop": "black (forced for audit scripts)"
  },
  "Angular_Death_1": {
   "method": "reference_palette",
