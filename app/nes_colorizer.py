@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """NES Colorizer - make art that is 100% compliant with NES background palette rules.
 
 Two jobs:

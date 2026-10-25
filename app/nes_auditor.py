@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """NES Auditor - check any image against the NES background palette rules.
 
 Shows which 16x16 squares break the "backdrop + 3 colours" rule, which palette group every
