@@ -2,23 +2,48 @@
 REM NES Colorizer launcher - just double-click this file.
 cd /d "%~dp0"
 set "PYX="
-where py >nul 2>nul && set "PYX=py -3"
-if not defined PYX where python >nul 2>nul && set "PYX=python"
+
+REM --- find a Python that actually RUNS (the 'py' launcher can point at a missing install)
+for %%C in ("python" "py -3" "python3" "py") do (
+  if not defined PYX (
+    %%~C -c "import sys" >nul 2>nul && set "PYX=%%~C"
+  )
+)
 if not defined PYX (
-  echo Python is not installed. Opening the download page...
-  echo Install Python 3.9 or newer and tick "Add Python to PATH", then run this again.
+  echo No working Python was found.
+  echo Install Python 3.9 or newer from python.org ^(tick "Add Python to PATH"^), then run this again.
+  echo Tip: in a Command Prompt, "python --version" should print a version.
   start "" https://www.python.org/downloads/windows/
   pause
   exit /b 1
 )
-%PYX% -c "import PIL, numpy, tkinter" >nul 2>nul
+for /f "delims=" %%V in ('%PYX% -c "import sys;print(sys.version.split()[0])"') do echo Using Python %%V  ^(%PYX%^)
+
+REM --- tkinter ships with python.org's installer
+%PYX% -c "import tkinter" >nul 2>nul
+if errorlevel 1 (
+  echo.
+  echo tkinter is missing from this Python. Reinstall Python from python.org with the default options.
+  pause
+  exit /b 1
+)
+
+REM --- Pillow + numpy
+%PYX% -c "import PIL, numpy" >nul 2>nul
 if errorlevel 1 (
   echo First run: installing Pillow and numpy...
   %PYX% -m pip install --user -r requirements.txt
-  %PYX% -c "import tkinter" >nul 2>nul || (echo tkinter is missing - reinstall Python from python.org with the default options. & pause & exit /b 1)
+  %PYX% -c "import PIL, numpy" >nul 2>nul
+  if errorlevel 1 (
+    echo.
+    echo Could not install Pillow/numpy. Try in a Command Prompt:  %PYX% -m pip install pillow numpy
+    pause
+    exit /b 1
+  )
 )
-REM pythonw runs without a console window; fall back to a visible one if it is not found
-set "PYW=%PYX:python=pythonw%"
-if "%PYX%"=="py -3" set "PYW=pyw -3"
-start "" %PYW% nes_colorizer.py
-if errorlevel 1 (%PYX% nes_colorizer.py & pause)
+
+REM --- launch (no console window when pythonw is available)
+if "%PYX%"=="python" ( start "" pythonw nes_colorizer.py & exit /b 0 )
+if "%PYX%"=="py -3" ( start "" pyw -3 nes_colorizer.py & exit /b 0 )
+%PYX% nes_colorizer.py
+if errorlevel 1 pause

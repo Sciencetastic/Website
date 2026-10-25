@@ -371,5 +371,21 @@ class AuditorApp(tk.Tk):
             self.run_audit()
 
 
+def _main():
+    import traceback
+    try:
+        AuditorApp(sys.argv[1] if len(sys.argv) > 1 else None).mainloop()
+    except Exception:  # noqa
+        log = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nes_tools_error.log")
+        with open(log, "w", encoding="utf-8") as fh:
+            fh.write(traceback.format_exc())
+        try:
+            r = tk.Tk(); r.withdraw()
+            messagebox.showerror("NES tools", "The program hit an error.\nDetails were saved to:\n" + log)
+        except Exception:  # noqa
+            pass
+        raise
+
+
 if __name__ == "__main__":
-    AuditorApp(sys.argv[1] if len(sys.argv) > 1 else None).mainloop()
+    _main()
