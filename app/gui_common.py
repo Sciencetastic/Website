@@ -137,7 +137,7 @@ class ImageView(ttk.Frame):
             return
         x, y = self.to_image_xy(ev)
         if 0 <= x < self.image.width and 0 <= y < self.image.height:
-            self.on_click((x, y))
+            self.on_click((x, y), ev.state)
 
     def scroll_to(self, x, y):
         """Scroll so image-space (x, y) is near the centre."""

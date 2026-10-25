@@ -132,8 +132,13 @@ def _min_cover(remaining, colors, budget_nodes=300000):
         return out, False
 
 
-def audit_canvas(canvas, backdrop=(0, 0, 0), tile_budget=192, nearblack=0, valid=None):
-    """Audit an HxWx3 canvas (H, W multiples of 16). Returns a result dict."""
+def audit_canvas(canvas, backdrop=(0, 0, 0), tile_budget=192, nearblack=0, valid=None,
+                 fixed_groups=None, assignments=None):
+    """Audit an HxWx3 canvas (H, W multiples of 16). Returns a result dict.
+
+    fixed_groups: optional list (<=4) of colour-code tuples. When given, the screen is judged against
+    exactly these palette groups (edit mode): blocks that fit none of them are reported as 'unfit'.
+    assignments: optional {(bx, by): group_index} preferred group per block (used when it fits)."""
     canvas = np.asarray(canvas, np.uint8)
     backdrop = tuple(int(v) for v in backdrop)
     if nearblack:
@@ -160,11 +165,15 @@ def audit_canvas(canvas, backdrop=(0, 0, 0), tile_budget=192, nearblack=0, valid
                                        for k, n in counts.items()},
                                _set=nonb))
 
-    forced = [s for s in sets if len(s) == 3]
-    remaining = [s for s in sets if len(s) < 3 and not any(s <= t for t in forced)]
-    colors = sorted(set().union(*[s for s in sets if len(s) <= 3]) if sets else set())
-    extra, exact_cover = _min_cover(remaining, colors)
-    groups = [tuple(sorted(s)) for s in forced] + [tuple(sorted(c)) for c in extra]
+    if fixed_groups is not None:
+        groups = [tuple(sorted(int(c) for c in g)) for g in fixed_groups]
+        exact_cover = True
+    else:
+        forced = [s for s in sets if len(s) == 3]
+        remaining = [s for s in sets if len(s) < 3 and not any(s <= t for t in forced)]
+        colors = sorted(set().union(*[s for s in sets if len(s) <= 3]) if sets else set())
+        extra, exact_cover = _min_cover(remaining, colors)
+        groups = [tuple(sorted(s)) for s in forced] + [tuple(sorted(c)) for c in extra]
 
     def hexs(code):
         return to_hex(np.array([(code >> 16) & 255, (code >> 8) & 255, code & 255]))
@@ -174,14 +183,23 @@ def audit_canvas(canvas, backdrop=(0, 0, 0), tile_budget=192, nearblack=0, valid
         s = b.pop("_set")
         b["conflict"] = b["slots"] > 4
         b["group"] = None
+        b["unfit"] = False
+        b["assigned"] = False
         if not b["conflict"]:
-            for gi, gs in enumerate(group_sets):
-                if s <= gs:
-                    b["group"] = gi
-                    break
+            pref = (assignments or {}).get((b["bx"], b["by"]))
+            if pref is not None and pref < len(group_sets) and s <= group_sets[pref]:
+                b["group"], b["assigned"] = pref, True
+            else:
+                for gi, gs in enumerate(group_sets):
+                    if s <= gs:
+                        b["group"] = gi
+                        break
+            if b["group"] is None and s:
+                b["unfit"] = True
         b["nonbackdrop"] = [hexs(c) for c in sorted(s)]
 
     conflicts = [b for b in blocks if b["conflict"]]
+    unfit = [b for b in blocks if b["unfit"]]
 
     # --- tile statistics (8x8)
     tiles = []
@@ -202,7 +220,9 @@ def audit_canvas(canvas, backdrop=(0, 0, 0), tile_budget=192, nearblack=0, valid
     result = dict(
         canvas=[W, H],
         backdrop=to_hex(backdrop),
-        palette_pass=(not conflicts) and groups_needed <= 4,
+        palette_pass=(not conflicts) and (not unfit) and groups_needed <= 4,
+        unfit_blocks=len(unfit),
+        edit_mode=fixed_groups is not None,
         conflict_blocks=len(conflicts),
         blocks_over_four_visible_colors=sum(b["visible_colors"] > 4 for b in blocks),
         max_slots_with_backdrop=max((b["slots"] for b in blocks), default=0),
@@ -214,6 +234,7 @@ def audit_canvas(canvas, backdrop=(0, 0, 0), tile_budget=192, nearblack=0, valid
                    within_budget=(canon_patterns <= tile_budget) if tile_budget else None),
         blocks=blocks,
         conflicts=conflicts,
+        unfit=unfit,
         nearblack_merge=int(nearblack),
     )
     result["_group_codes"] = [list(g) for g in groups]
@@ -238,6 +259,7 @@ def summary_lines(res):
              "backdrop %s | canvas %dx%d" % (res["backdrop"], res["canvas"][0], res["canvas"][1]),
              "palette groups needed: %d (max 4)%s" % (res["groups_needed"], "" if res["groups_exact"] else " (approx.)"),
              "blocks over backdrop+3: %d" % res["conflict_blocks"],
+             ] + (["blocks fitting none of the 4 palettes: %d" % res["unfit_blocks"]] if res.get("edit_mode") else []) + [
              "worst block: %d slots (max 4)" % res["max_slots_with_backdrop"],
              "blocks with >4 visible colors: %d" % res["blocks_over_four_visible_colors"],
              "8x8 pattern lower bound: %d" % t["pattern_lower_bound"],
@@ -268,6 +290,12 @@ def render_annotated(canvas, res, scale=None, grid=True, tint=True, labels=True,
             if labels:
                 d.rectangle((x + 2, y + 2, x + 6 + 8 * scale // 2, y + 4 + scale * 3), fill=(0, 0, 0, 220))
                 d.text((x + 4, y + 2), str(b["slots"]), font=font, fill=(255, 90, 90, 255))
+        elif b.get("unfit"):
+            d.rectangle((x, y, x + bs - 1, y + bs - 1), fill=(255, 150, 0, 50) if tint else None,
+                        outline=(255, 150, 0, 255), width=max(2, scale // 2))
+            if labels:
+                d.rectangle((x + 2, y + 2, x + 6 + 8 * scale // 2, y + 4 + scale * 3), fill=(0, 0, 0, 220))
+                d.text((x + 4, y + 2), "?", font=font, fill=(255, 170, 40, 255))
         elif b["group"] is not None and not blank:
             gc = GROUP_COLORS[b["group"] % 4] if b["group"] < 4 else (160, 160, 160)
             if tint:
@@ -339,7 +367,7 @@ def save_report(folder, base, canvas, res, source=None):
         w = csv.writer(fh)
         w.writerow(["x", "y", "visible_colors", "slots_with_backdrop", "group", "status", "colors"])
         for b in res["blocks"]:
-            status = "CONFLICT" if b["conflict"] else ("ok" if b["slots"] > 1 else "empty")
+            status = "CONFLICT" if b["conflict"] else ("UNFIT" if b.get("unfit") else ("ok" if b["slots"] > 1 else "empty"))
             w.writerow([b["x"], b["y"], b["visible_colors"], b["slots"],
                         "" if b["group"] is None else b["group"] + 1, status, " ".join(b["colors"])])
     buf = io.BytesIO()
@@ -347,9 +375,9 @@ def save_report(folder, base, canvas, res, source=None):
     b64 = base64.b64encode(buf.getvalue()).decode("ascii")
     rows = "".join(
         "<tr class='%s'><td>%d,%d</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
-            "bad" if b["conflict"] else "", b["x"], b["y"], b["slots"],
+            "bad" if (b["conflict"] or b.get("unfit")) else "", b["x"], b["y"], b["slots"],
             "" if b["group"] is None else b["group"] + 1,
-            "CONFLICT" if b["conflict"] else ("ok" if b["slots"] > 1 else "empty"),
+            "CONFLICT" if b["conflict"] else ("UNFIT" if b.get("unfit") else ("ok" if b["slots"] > 1 else "empty")),
             html.escape(" ".join("%s:%d" % kv for kv in b["colors"].items())))
         for b in res["blocks"] if b["slots"] > 1)
     with open(paths["audit.html"], "w", encoding="utf-8") as fh:

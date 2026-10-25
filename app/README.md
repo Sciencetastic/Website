@@ -60,6 +60,17 @@ near-black merge diagnostic.
 * **Summary** – PASS/FAIL, groups needed (max 4), worst square, tile counts, and the palette-group swatches.
 * **Blocks** tab – every square with its group and colours; filter to over-limit squares.
 * **Batch** tab / *Batch folder → CSV* – one line per image; per-image reports optional.
+* **Edit tab – change a square's palette group.** Click a square (Shift+click to add more, or *Select over-limit* /
+  *Select unfit*), then press **Assign to group N** (or the keys **1–4**). The square's pixels are remapped into that
+  group's colours: the backdrop stays the backdrop and the other colours map one-to-one onto the group's colours by
+  least colour error (extra colours fold into the nearest). *Auto-assign best group* picks the best-fitting group for
+  each selected square. **Undo / Redo** (Ctrl+Z / Ctrl+Y) and **Reset all edits** are available.
+  While editing, the screen is judged against a fixed set of up to 4 palettes: the detected groups if the image needs 4
+  or fewer, otherwise **Suggest 4 palettes** picks the best 4 for the current pixels (orange `?` squares fit none of them
+  and red squares have too many colours - assign them to a group to fix them).
+  **Save edited image…** writes the PNG (original size and transparency kept); **Export attribute table…** writes
+  `*.attr.bin` (64-byte NES attribute table: palette number 0-3 = group 1-4 for each 16×16 square) and `*.attr.json`
+  (the 4 palettes + the per-square palette numbers).
 * **Save report…** writes `_audit.png`, `_audit.json`, `_blocks.csv`, `_audit.html`.
 
 The rules and the "minimum palette groups" search mirror the supplied audit scripts.
@@ -79,4 +90,5 @@ python -m nes_tools convert gb.png out.png --mode gb --crop 0 0 112 112 --refere
 ```
 python tests/test_core.py
 xvfb-run -a python tests/test_gui.py        # Linux; on Windows/macOS just: python tests/test_gui.py
+xvfb-run -a python tests/test_edit.py       # palette-editing tests
 ```
