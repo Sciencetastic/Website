@@ -15,7 +15,7 @@ background palette rules:
 ## Run it (Windows)
 
 1. Install Python 3.9 or newer from python.org (tick *Add Python to PATH*; tkinter is included).
-2. Double-click `run_colorizer.bat` or `run_auditor.bat`. The first run installs Pillow and numpy.
+2. Double-click `run_colorizer.bat` or `run_auditor.bat` (or `NES_Tools_Launcher.bat` for a menu). The first run installs Pillow and numpy; the app opens without a console window.
 3. Optional: double-click `build_exe.bat` to create standalone `NES_Colorizer.exe` / `NES_Auditor.exe` in `dist\`.
 
 macOS / Linux: `pip install -r requirements.txt`, then `./run_colorizer.sh` or `./run_auditor.sh`
