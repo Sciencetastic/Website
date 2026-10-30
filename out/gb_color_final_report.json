@@ -1,0 +1,743 @@
+{
+ "Barn": {
+  "method": "B_direct",
+  "source": "Village_Barn/Village_Barn_Background.png",
+  "offset": [
+   7,
+   3
+  ],
+  "err_A": 7352,
+  "err_B": 2727,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "burnt_bedroom": {
+  "method": "B_direct",
+  "source": "Village_Burnt_Bedroom/Background.png",
+  "offset": [
+   0,
+   0
+  ],
+  "err_A": 8997,
+  "err_B": 2086
+ },
+ "Burnt_LittleGirl": {
+  "method": "B_direct",
+  "source": "Village_MarketPlace_Burnt_LittleGirl/Village_MarketPlace_Burnt_LittleGirl_Background.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 8034,
+  "err_B": 2420
+ },
+ "car2": {
+  "method": "B_direct",
+  "source": "Ending/Ending_Car_Background1.png",
+  "offset": [
+   0,
+   10
+  ],
+  "err_A": 18742,
+  "err_B": 3884,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "collapsed-barn": {
+  "method": "B_direct",
+  "source": "Village_Farm_int/collapsed barn BG.png",
+  "offset": [
+   10,
+   8
+  ],
+  "err_A": 1440,
+  "err_B": 166
+ },
+ "field": {
+  "method": "B_direct",
+  "source": "Village_Field/Field_Background.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 1737,
+  "err_B": 732,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Forest_Briar": {
+  "method": "B_direct",
+  "source": "Forest_Briar/Forest_Briar_Background.png",
+  "offset": [
+   0,
+   8
+  ],
+  "err_A": 13020,
+  "err_B": 3072,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Forest_Briar_nocut": {
+  "method": "B_direct",
+  "source": "Forest_Briar/Forest_Briar_Background.png",
+  "offset": [
+   0,
+   8
+  ],
+  "err_A": 16814,
+  "err_B": 3072,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Forest_inside_watchtower_Dark": {
+  "method": "B_direct",
+  "source": "Forest_Inside_Watchtower/Forest_inside_watchtower_Dark.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 3866,
+  "err_B": 694
+ },
+ "Forest_inside_watchtower_LIGHT": {
+  "method": "B_direct",
+  "source": "Forest_Inside_Watchtower/Forest_inside_watchtower_LIGHT.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 6909,
+  "err_B": 1837
+ },
+ "Forest_Start": {
+  "method": "B_direct",
+  "source": "Forest_Start/Forest_Start_BG.png",
+  "offset": [
+   8,
+   8
+  ],
+  "err_A": 5800,
+  "err_B": 2724,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "inside_cave": {
+  "method": "B_direct",
+  "source": "Forest_Inside_Cave/Forest_InsideCave_BackGround.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 800,
+  "err_B": 160
+ },
+ "locked_marketplace_stairs_room": {
+  "method": "B_direct",
+  "source": "Villiage_MarketPlace_Locked_Mainroom/villiage_locked_mainroom_background.png",
+  "offset": [
+   6,
+   5
+  ],
+  "err_A": 35131,
+  "err_B": 1623
+ },
+ "Market_Interior_Burnt": {
+  "method": "B_direct",
+  "source": "Village_Market_Interior_Burnt/Market_Interior_Burnt_background.png",
+  "offset": [
+   7,
+   5
+  ],
+  "err_A": 22546,
+  "err_B": 565
+ },
+ "Mine_Dark_Room_Dark": {
+  "method": "A_gb_structure",
+  "source": "Mine_Dark_Room/Mine_Dark_Room_Dark.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 0,
+  "err_B": 0
+ },
+ "Mine_Dark_Room_Light": {
+  "method": "B_direct",
+  "source": "Mine_Dark_Room/Mine_Dark_Room_Light.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 218,
+  "err_B": 144
+ },
+ "Mine_Entrance": {
+  "method": "B_direct",
+  "source": "Mine_Entrance/Mine_Entrance.png",
+  "offset": [
+   10,
+   0
+  ],
+  "err_A": 6967,
+  "err_B": 796
+ },
+ "Mine_Pool": {
+  "method": "B_direct",
+  "source": "Mine_Pool/Mine_Pool_Background.png",
+  "offset": [
+   7,
+   6
+  ],
+  "err_A": 3366,
+  "err_B": 1013
+ },
+ "Mine_Split": {
+  "method": "B_direct",
+  "source": "Mine_Split/Mine_Split_Background.png",
+  "offset": [
+   8,
+   2
+  ],
+  "err_A": 8025,
+  "err_B": 667
+ },
+ "Mine_Temple_Entrance": {
+  "method": "B_direct",
+  "source": "Mine_Temple_Entrance/Mine_Temple_Entrance_Background.png",
+  "offset": [
+   6,
+   0
+  ],
+  "err_A": 4124,
+  "err_B": 939
+ },
+ "OpenMine": {
+  "method": "B_direct",
+  "source": "Village_Mine_Entrance/Background8OpenMine.png",
+  "offset": [
+   8,
+   7
+  ],
+  "err_A": 21437,
+  "err_B": 638,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Outside_Cave_Wolf": {
+  "method": "B_direct",
+  "source": "Forest_Ext_Cave/Outisde_Cave_Background.png",
+  "offset": [
+   0,
+   9
+  ],
+  "err_A": 6010,
+  "err_B": 909,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Outside_Cave_Wolf_Dead": {
+  "method": "B_direct",
+  "source": "Forest_Ext_Cave/Outisde_Cave_Background.png",
+  "offset": [
+   0,
+   10
+  ],
+  "err_A": 32815,
+  "err_B": 1031,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Priest_House": {
+  "method": "B_direct",
+  "source": "Village_Priest_House_Ext/Priest_House.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 3836,
+  "err_B": 1849
+ },
+ "PriestHouseIntb": {
+  "method": "B_direct",
+  "source": "Village_preist_interior/PriestHouseInt.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 3974,
+  "err_B": 1372
+ },
+ "Puz": {
+  "method": "B_direct",
+  "source": "Temple_Puzzle/Puz_Background.png",
+  "offset": [
+   5,
+   8
+  ],
+  "err_A": 23377,
+  "err_B": 379
+ },
+ "Switchback": {
+  "method": "B_direct",
+  "source": "Forest_SwitchBack/ForestSswitchback_trail.png",
+  "offset": [
+   7,
+   10
+  ],
+  "err_A": 3698,
+  "err_B": 2180,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Tavern": {
+  "method": "B_direct",
+  "source": "Village_Ext_Tavern/Tavern_Ext_Background.png",
+  "offset": [
+   2,
+   5
+  ],
+  "err_A": 5542,
+  "err_B": 1967
+ },
+ "Tavern_Window": {
+  "method": "B_direct",
+  "source": "Village_Tavern_Window/Tavern_Window.png",
+  "offset": [
+   10,
+   9
+  ],
+  "err_A": 15101,
+  "err_B": 6350
+ },
+ "Throne_Dark": {
+  "method": "B_direct",
+  "source": "Temple_CU/Temple_CU_Background_Intro1.png",
+  "offset": [
+   5,
+   5
+  ],
+  "err_A": 1753,
+  "err_B": 933
+ },
+ "Throne_Empty": {
+  "method": "B_direct",
+  "source": "Temple_CU/Temple_CU_Background_NOMAN.png",
+  "offset": [
+   5,
+   5
+  ],
+  "err_A": 3937,
+  "err_B": 513
+ },
+ "Throne_Light": {
+  "method": "B_direct",
+  "source": "Temple_CU/Temple_CU_Background_Intro4.png",
+  "offset": [
+   5,
+   5
+  ],
+  "err_A": 6051,
+  "err_B": 1900
+ },
+ "Throne_Settle": {
+  "method": "B_direct",
+  "source": "Temple_CU/Temple_CU_Background_Intro3.png",
+  "offset": [
+   5,
+   5
+  ],
+  "err_A": 7465,
+  "err_B": 1367
+ },
+ "Village_Alchemist_Int_Master_book": {
+  "method": "B_direct",
+  "source": "Village_Alchemist_Int_Master/Village_Alchemist_Int_Master_Background.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 6489,
+  "err_B": 1247
+ },
+ "Village_Alchemist_Int_Master_nobook": {
+  "method": "B_direct",
+  "source": "Village_Alchemist_Int_Master/Village_Alchemist_Int_Master_Background_NOBOOK.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 5380,
+  "err_B": 982
+ },
+ "Village_Barn_Interior": {
+  "method": "B_direct",
+  "source": "Village_Barn_Interior/Village_Barn_Interior_Background.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 11950,
+  "err_B": 3761
+ },
+ "Village_Barn_Office_Ext": {
+  "method": "B_direct",
+  "source": "Village_Barn_Office_Ext/Village_Barn_Office_Ext_Background.png",
+  "offset": [
+   0,
+   10
+  ],
+  "err_A": 6030,
+  "err_B": 908
+ },
+ "Village_Barn_Office_Int": {
+  "method": "B_direct",
+  "source": "Village_Barn_Office_Int/Village_Barn_Office_Int_Background.png",
+  "offset": [
+   0,
+   1
+  ],
+  "err_A": 31007,
+  "err_B": 1937
+ },
+ "Village_Cages": {
+  "method": "B_direct",
+  "source": "Village_Alchemist_Int_Cage/Village_lchemist_Int_Cage_Background.png",
+  "offset": [
+   0,
+   10
+  ],
+  "err_A": 3129,
+  "err_B": 231
+ },
+ "Village_Carrol": {
+  "method": "B_direct",
+  "source": "Villiage_Carrol/Village_Carrol_Background.png",
+  "offset": [
+   7,
+   5
+  ],
+  "err_A": 34870,
+  "err_B": 2256
+ },
+ "Village_Ext_Market_Closed": {
+  "method": "B_direct",
+  "source": "Village_Ext_Market/Village_Ext_Market_Closed.png",
+  "offset": [
+   4,
+   7
+  ],
+  "err_A": 37108,
+  "err_B": 2475
+ },
+ "Village_Ext_Market_Open": {
+  "method": "B_direct",
+  "source": "Village_Ext_Market/Village_Ext_Market_Open.png",
+  "offset": [
+   4,
+   7
+  ],
+  "err_A": 38074,
+  "err_B": 2678
+ },
+ "Village_Farm": {
+  "method": "B_direct",
+  "source": "Village_Farm/Village_Farm.png",
+  "offset": [
+   0,
+   10
+  ],
+  "err_A": 9589,
+  "err_B": 643,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "village_merch_bedroom": {
+  "method": "B_direct",
+  "source": "Village_Marketplace_Locked_Bedroom/locked_marketplace_stairs_room_background.png",
+  "offset": [
+   0,
+   10
+  ],
+  "err_A": 13760,
+  "err_B": 2651
+ },
+ "Village_Ruined_House_Background_empty": {
+  "method": "B_direct",
+  "source": "Village_Ruined_House/Village_Ruined_House_Background_empty.png",
+  "offset": [
+   10,
+   0
+  ],
+  "err_A": 10217,
+  "err_B": 2186
+ },
+ "Village_shacks": {
+  "method": "B_direct",
+  "source": "Village_Shacks/Village_shacks.png",
+  "offset": [
+   10,
+   10
+  ],
+  "err_A": 8715,
+  "err_B": 1298,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Village_Tavern": {
+  "method": "B_direct",
+  "source": "Village_Tavern_Inside/Village_Tavern_Background.png",
+  "offset": [
+   5,
+   10
+  ],
+  "err_A": 3119,
+  "err_B": 555
+ },
+ "Village_Temple": {
+  "method": "B_direct",
+  "source": "Ending/Ending_Outside_Tower12.png",
+  "offset": [
+   0,
+   10
+  ],
+  "err_A": 21899,
+  "err_B": 3800
+ },
+ "Village_View_Master": {
+  "method": "B_direct",
+  "source": "Village_Master_View/Village_View_Master.png",
+  "offset": [
+   0,
+   0
+  ],
+  "err_A": 8839,
+  "err_B": 1649
+ },
+ "VillageValley_DEER_1": {
+  "method": "B_direct",
+  "source": "Forest_Deer_Cliff/Cliff_Deer_closeup1.png",
+  "offset": [
+   2,
+   10
+  ],
+  "err_A": 18125,
+  "err_B": 758
+ },
+ "VillageValley_DEER_2": {
+  "method": "B_direct",
+  "source": "Forest_Deer_Cliff/Cliff_Deer_closeup2.png",
+  "offset": [
+   2,
+   10
+  ],
+  "err_A": 17615,
+  "err_B": 1086
+ },
+ "watchtower-top": {
+  "method": "B_direct",
+  "source": "Forest_Watch_Tower_top/watchtower top_background_melt_fire_CLOSED.png",
+  "offset": [
+   1,
+   1
+  ],
+  "err_A": 37496,
+  "err_B": 2641,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "watchtower_Tower": {
+  "method": "B_direct",
+  "source": "Forest_Watchtower_ext/watchtower_Tower_closed.png",
+  "offset": [
+   5,
+   7
+  ],
+  "err_A": 30606,
+  "err_B": 1389,
+  "backdrop": "black (forced for audit scripts)"
+ },
+ "Angular_Death_1": {
+  "method": "reference_palette",
+  "reference": "Deaths/Alch_ANGULAR.png",
+  "cropped_to_viewport": false
+ },
+ "Black_BG": {
+  "method": "theme_fallback",
+  "cropped_to_viewport": false
+ },
+ "CU1": {
+  "method": "reference_palette",
+  "reference": "CU/CU1.png",
+  "cropped_to_viewport": false
+ },
+ "CU4": {
+  "method": "reference_palette",
+  "reference": "CU/CU4.png",
+  "cropped_to_viewport": false
+ },
+ "CU5": {
+  "method": "reference_palette",
+  "reference": "CU/CU5.png",
+  "cropped_to_viewport": false
+ },
+ "Cellar_Candle_Death": {
+  "method": "reference_palette",
+  "reference": "Village_Cellar/Cellar_Candle_Death.png",
+  "cropped_to_viewport": false
+ },
+ "Face_Eaten": {
+  "method": "reference_palette",
+  "reference": "Deaths/Alch_Face_Eaten.png",
+  "cropped_to_viewport": false
+ },
+ "Fall_Backswitch": {
+  "method": "reference_palette",
+  "reference": "Forest_SwitchBack/Player_Fall.png",
+  "cropped_to_viewport": false
+ },
+ "Forest_Cave_Death_F1": {
+  "method": "reference_palette",
+  "reference": "Deaths/Cave_In/Forest_Cave_Death_Frame1.png",
+  "cropped_to_viewport": false
+ },
+ "Forest_Cave_Death_F3": {
+  "method": "reference_palette",
+  "reference": "Deaths/Cave_In/Forest_Cave_Death_Frame3.png",
+  "cropped_to_viewport": false
+ },
+ "Forest_Cave_Death_f2": {
+  "method": "reference_palette",
+  "reference": "Deaths/Cave_In/Forest_Cave_Death_Frame2.png",
+  "cropped_to_viewport": false
+ },
+ "Gameboy Graphic": {
+  "method": "theme_fallback",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_Blank": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_Diary_Page": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_FOLIO_Journal_Select": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_FOLIO_select_blank": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_KEYS_select_blank": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_LARGE_select": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_LARGE_select2": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_Notes_Select": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_SMALL_select_blank": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Inventory UI_TOOLS_select_blank": {
+  "method": "reference_palette",
+  "reference": "UI/UI_0002_Layer-1.png",
+  "cropped_to_viewport": false
+ },
+ "Market_Place_Death": {
+  "method": "reference_palette",
+  "reference": "Deaths/Market_Place_Death.png",
+  "cropped_to_viewport": false
+ },
+ "Mine_Death": {
+  "method": "reference_palette",
+  "reference": "Deaths/Mine_Death.png",
+  "cropped_to_viewport": false
+ },
+ "Mine_Temple_Flame_death": {
+  "method": "reference_palette",
+  "reference": "Deaths/Mine_Temple_ flame_Death.png",
+  "cropped_to_viewport": false
+ },
+ "Opening_1": {
+  "method": "reference_palette",
+  "reference": "Opening/Opening_1.png",
+  "cropped_to_viewport": false
+ },
+ "Opening_2": {
+  "method": "reference_palette",
+  "reference": "Opening/Opening_2.png",
+  "cropped_to_viewport": false
+ },
+ "Opening_3": {
+  "method": "reference_palette",
+  "reference": "Opening/Opening_3.png",
+  "cropped_to_viewport": false
+ },
+ "Opening_4": {
+  "method": "reference_palette",
+  "reference": "Opening/Opening_4.png",
+  "cropped_to_viewport": false
+ },
+ "Opening_5": {
+  "method": "reference_palette",
+  "reference": "Opening/Opening_5.png",
+  "cropped_to_viewport": false
+ },
+ "VillageValley": {
+  "method": "reference_palette",
+  "reference": "Forest_Deer_Cliff/Background6VillageValley.png",
+  "cropped_to_viewport": true
+ },
+ "Village_Black_Smith": {
+  "method": "reference_palette",
+  "reference": "Village_BlackSmith/Village_Black_Smith_Background.png",
+  "cropped_to_viewport": true
+ },
+ "Village_Work_Bench": {
+  "method": "reference_palette",
+  "reference": "Village_Alchemist_Int_WorkBench/Village_Work_Bench_Background.png",
+  "cropped_to_viewport": true
+ },
+ "alchemist_house": {
+  "method": "reference_palette",
+  "reference": "Village_Alchemist_House/Village_Alchemist_Ext.png",
+  "cropped_to_viewport": true
+ },
+ "alchemist_house_door_open": {
+  "method": "reference_palette",
+  "reference": "Village_Alchemist_House/Village_Alchemist_Door_Open.png",
+  "cropped_to_viewport": true
+ },
+ "black": {
+  "method": "theme_fallback",
+  "cropped_to_viewport": false
+ },
+ "logo": {
+  "method": "reference_palette",
+  "reference": "Title/Title_title.png",
+  "cropped_to_viewport": false
+ },
+ "tentacle_Death": {
+  "method": "reference_palette",
+  "reference": "Tentacle_Grab_2/1_0022_Layer-2.png",
+  "cropped_to_viewport": false
+ },
+ "titlescreen": {
+  "method": "reference_palette",
+  "reference": "Title/Title_BG_1.png",
+  "cropped_to_viewport": false
+ },
+ "wolf_bite": {
+  "method": "reference_palette",
+  "reference": "Deaths/wolf_bite.png",
+  "cropped_to_viewport": false
+ }
+}

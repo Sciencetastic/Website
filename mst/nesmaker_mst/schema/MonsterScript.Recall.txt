@@ -1,0 +1,13 @@
+v0 = R:Int32()
+this.Script = new tok2000093[v0]
+v1 = 0
+goto L74aea
+L74acd:
+v2 = new MonsterActionStep()
+v2.Recall(a1)
+this.Script[v1] = v2
+v1 = (v1 + 1)
+L74aea:
+v3 = (v1 < v0)
+if v3 goto L74acd
+return 

@@ -1,0 +1,159 @@
+v0 = 0
+v1 = R:Int32()
+FileVersion = R:Int32()
+v2 = (v1 == -559084115)
+if !v2 goto L37e0f
+v0 = 1
+goto L37e34
+L37e0f:
+v3 = ((v1 == -559080019) == 0)
+if !v3 goto L37e34
+goto L38204
+L37e34:
+v4 = v0
+if !v4 goto L37eca
+this.ScriptDefines.Clear()
+v5 = R:Int32()
+v6 = 0
+goto L37e7f
+L37e59:
+v7 = new ScriptDefine()
+v7.Recall(a1)
+this.ScriptDefines.Add(v7)
+v6 = (v6 + 1)
+L37e7f:
+v8 = (v6 < v5)
+if v8 goto L37e59
+this.RecallDictionary(this.MonsterFlagLabels,a1)
+this.RecallDictionary(this.MonsterActionStepFlagLabels,a1)
+this.RecallDictionary(this.ScreenFlagLabels,a1)
+this.RecallList(this.GlobalUserVars,a1)
+goto L38204
+L37eca:
+v9 = (FileVersion > 6)
+if !v9 goto L37eef
+goto L38204
+L37eef:
+this.ScriptDefines.Clear()
+v10 = R:Int32()
+v14 = 0
+goto L37f2f
+L37f09:
+v15 = new ScriptDefine()
+v15.Recall(a1)
+this.ScriptDefines.Add(v15)
+v14 = (v14 + 1)
+L37f2f:
+v16 = (v14 < v10)
+if v16 goto L37f09
+v11 = R:Int32()
+v12 = R:Int32()
+v13 = R:Int32()
+this.MainListLabels.Clear()
+this.MainDictLabels.Clear()
+this.MainTupleListLabels.Clear()
+v17 = 0
+goto L37fad
+L37f7c:
+v18 = R:Int32()
+v19 = new R:TypeSpec()
+this.RecallList(v19,a1)
+this.MainListLabels.Item[v18] = v19
+v17 = (v17 + 1)
+L37fad:
+v20 = (v17 < v11)
+if v20 goto L37f7c
+v21 = 0
+goto L37fef
+L37fbe:
+v22 = R:Int32()
+v23 = new R:TypeSpec()
+this.RecallDictionary(v23,a1)
+this.MainDictLabels.Item[v22] = v23
+v21 = (v21 + 1)
+L37fef:
+v24 = (v21 < v12)
+if v24 goto L37fbe
+v25 = 0
+goto L38031
+L38000:
+v26 = R:Int32()
+v27 = new R:TypeSpec()
+this.RecallTupleList(v27,a1)
+this.MainTupleListLabels.Item[v26] = v27
+v25 = (v25 + 1)
+L38031:
+v28 = (v25 < v13)
+if v28 goto L38000
+v29 = ((FileVersion < 3) == 0)
+if !v29 goto L380ea
+v30 = new R:TypeSpec()
+v31 = R:Int32()
+v33 = 0
+goto L38089
+L38067:
+v34 = new SFXLink()
+v34.Recall(a1)
+v30.Add(v34)
+v33 = (v33 + 1)
+L38089:
+v35 = (v33 < v31)
+if v35 goto L38067
+this.SFXLinks = v30
+v32 = new R:TypeSpec()
+v31 = R:Int32()
+v36 = 0
+goto L380d4
+L380b2:
+v37 = new UserDefinedVar()
+v37.Recall(a1)
+v32.Add(v37)
+v36 = (v36 + 1)
+L380d4:
+v38 = (v36 < v31)
+if v38 goto L380b2
+this.UserDefinedVars = v32
+L380ea:
+v39 = ((FileVersion < 4) == 0)
+if !v39 goto L38203
+v40 = FileVersion
+v44 = (FileVersion < 5)
+if !v44 goto L38122
+FileVersion = 342
+goto L3813c
+L38122:
+v45 = (FileVersion < 6)
+if !v45 goto L3813c
+FileVersion = 343
+L3813c:
+v41 = R:Boolean()
+v46 = v41
+if !v46 goto L38167
+this.MyObjectVariables = new ObjectVariables()
+this.MyObjectVariables.Recall(a1)
+L38167:
+v42 = R:Boolean()
+v47 = v42
+if !v47 goto L38192
+this.UserRAMDefine_ZeroPage = new UserRAMDefine()
+this.UserRAMDefine_ZeroPage.Recall(a1)
+L38192:
+v43 = R:Boolean()
+v48 = v43
+if !v48 goto L381bd
+this.UserRAMDefine_Overflow = new UserRAMDefine()
+this.UserRAMDefine_Overflow.Recall(a1)
+L381bd:
+v49 = ((FileVersion < 6) == 0)
+if !v49 goto L381fb
+v50 = R:Boolean()
+v51 = v50
+if !v51 goto L381fa
+this.UserDefinedConstants = new UserRAMDefine()
+this.UserDefinedConstants.Recall(a1)
+L381fa:
+L381fb:
+FileVersion = v40
+L38203:
+L38204:
+return 

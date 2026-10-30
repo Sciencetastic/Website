@@ -1,0 +1,60 @@
+this.HudX = R:Int32()
+this.HudY = R:Int32()
+this.HudWidth = R:Int32()
+this.HudHeight = R:Int32()
+this.PlayableX = R:Int32()
+this.PlayableY = R:Int32()
+this.PlayableWidth = R:Int32()
+this.PlayableHeight = R:Int32()
+v0 = R:Int32()
+this.HudTileLinks.Clear()
+v3 = 0
+goto L22550
+L2252c:
+v4 = new HudTileLink()
+v4.Recall(a1)
+this.HudTileLinks.Add(v4)
+v3 = (v3 + 1)
+L22550:
+v5 = (v3 < v0)
+if v5 goto L2252c
+v1 = R:Int32()
+this.HudAssets.Clear()
+v6 = 0
+goto L22598
+L22572:
+v7 = new HudAsset()
+v7.Recall(a1)
+this.HudAssets.Add(v7)
+v6 = (v6 + 1)
+L22598:
+v8 = (v6 < v1)
+if v8 goto L22572
+v2 = R:Int32()
+this.Elements.Clear()
+v9 = 0
+goto L225e1
+L225bb:
+v10 = new HudElement()
+v10.Recall(a1)
+this.Elements.Add(v10)
+v9 = (v9 + 1)
+L225e1:
+v11 = (v9 < v2)
+if v11 goto L225bb
+v12 = ((FileVersion < 325) == 0)
+if !v12 goto L226a2
+this.Box1X = R:Int32()
+this.Box1Y = R:Int32()
+this.Box1Width = R:Int32()
+this.Box1Height = R:Int32()
+this.Box2X = R:Int32()
+this.Box2Y = R:Int32()
+this.Box2Width = R:Int32()
+this.Box2Height = R:Int32()
+this.Box3X = R:Int32()
+this.Box3Y = R:Int32()
+this.Box3Width = R:Int32()
+this.Box3Height = R:Int32()
+L226a2:
+return 

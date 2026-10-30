@@ -1,0 +1,63 @@
+this.ScreenTypes.Clear()
+v0 = R:Int32()
+v1 = 0
+goto L54938
+L54920:
+this.ScreenTypes.Add(R:String())
+v1 = (v1 + 1)
+L54938:
+v2 = (v1 < v0)
+if v2 goto L54920
+this.OverworldMapComment.Clear()
+v0 = R:Int32()
+v3 = 0
+goto L5498c
+L54957:
+v4 = R:Int32()
+v5 = R:Int32()
+v6 = R:String()
+this.OverworldMapComment.Item[new Point(v4,v5)] = v6
+v3 = (v3 + 1)
+L5498c:
+v7 = (v3 < v0)
+if v7 goto L54957
+this.UnderworldMapComment.Clear()
+v0 = R:Int32()
+v8 = 0
+goto L549e5
+L549ae:
+v9 = R:Int32()
+v10 = R:Int32()
+v11 = R:String()
+this.UnderworldMapComment.Item[new Point(v9,v10)] = v11
+v8 = (v8 + 1)
+L549e5:
+v12 = (v8 < v0)
+if v12 goto L549ae
+this.OverworldMapScreenType.Clear()
+v0 = R:Int32()
+v13 = 0
+goto L54a3f
+L54a08:
+v14 = R:Int32()
+v15 = R:Int32()
+v16 = R:Int32()
+this.OverworldMapScreenType.Item[new Point(v14,v15)] = v16
+v13 = (v13 + 1)
+L54a3f:
+v17 = (v13 < v0)
+if v17 goto L54a08
+this.UnderworldMapScreenType.Clear()
+v0 = R:Int32()
+v18 = 0
+goto L54a99
+L54a62:
+v19 = R:Int32()
+v20 = R:Int32()
+v21 = R:Int32()
+this.UnderworldMapScreenType.Item[new Point(v19,v20)] = v21
+v18 = (v18 + 1)
+L54a99:
+v22 = (v18 < v0)
+if v22 goto L54a62
+return 

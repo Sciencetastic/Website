@@ -1,0 +1,13 @@
+this.TextEntries.Clear()
+v0 = R:Int32()
+v1 = 0
+goto Lc8095
+Lc8074:
+v2 = new TextEntry()
+v2.Recall(a1)
+this.TextEntries.Add(v2)
+v1 = (v1 + 1)
+Lc8095:
+v3 = (v1 < v0)
+if v3 goto Lc8074
+return 

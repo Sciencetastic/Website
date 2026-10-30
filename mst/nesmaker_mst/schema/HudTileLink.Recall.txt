@@ -1,0 +1,4 @@
+this.MyLetter = R:Char()
+this.TileID = R:Byte()
+this.SymbolName = R:String()
+return 

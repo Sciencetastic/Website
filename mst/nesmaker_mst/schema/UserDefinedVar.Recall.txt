@@ -1,0 +1,11 @@
+this.Name = R:String()
+this.InitialValue = R:Int32()
+v0 = ((FileVersion < 343) == 0)
+if !v0 goto L6c3cd
+this.Enabled = R:Boolean()
+L6c3cd:
+v1 = ((FileVersion < 344) == 0)
+if !v1 goto L6c3ef
+this.Notes = R:String()
+L6c3ef:
+return 

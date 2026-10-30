@@ -1,0 +1,37 @@
+this.Actor.Recall(a1)
+this.ActorVars.Clear()
+v0 = R:Int32()
+v2 = 0
+goto L3a652
+L3a631:
+v3 = new UserDefinedVar()
+v3.Recall(a1)
+this.ActorVars.Add(v3)
+v2 = (v2 + 1)
+L3a652:
+v4 = (v2 < v0)
+if v4 goto L3a631
+this.ActionGroups.Clear()
+v1 = R:Int32()
+v5 = 0
+goto L3a6d6
+L3a674:
+v6 = R:Int32()
+v7 = R:Int32()
+v8 = new R:TypeSpec()
+this.ActionGroups.Item[v6] = v8
+v9 = 0
+goto L3a6c3
+L3a6a1:
+v10 = new ActorAction()
+v10.Recall(a1)
+v8.Add(v10)
+v9 = (v9 + 1)
+L3a6c3:
+v11 = (v9 < v7)
+if v11 goto L3a6a1
+v5 = (v5 + 1)
+L3a6d6:
+v12 = (v5 < v1)
+if v12 goto L3a674
+return 

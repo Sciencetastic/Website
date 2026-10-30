@@ -1,0 +1,40 @@
+this.Code = R:Byte()
+this.Name = R:String()
+this.Info = R:String()
+this.ActionParams.Clear()
+v0 = R:Int32()
+v1 = 0
+goto L3ce4
+L3cc3:
+v2 = new ActorActionParam()
+v2.Recall(a1)
+this.ActionParams.Add(v2)
+v1 = (v1 + 1)
+L3ce4:
+v3 = (v1 < v0)
+if v3 goto L3cc3
+this.Options.Clear()
+v0 = R:Int32()
+v4 = 0
+goto L3d2a
+L3d04:
+v5 = new ActionParamOption()
+v5.Recall(a1)
+this.Options.Add(v5)
+v4 = (v4 + 1)
+L3d2a:
+v6 = (v4 < v0)
+if v6 goto L3d04
+this.Options2.Clear()
+v0 = R:Int32()
+v7 = 0
+goto L3d73
+L3d4d:
+v8 = new ActionParamOption()
+v8.Recall(a1)
+this.Options2.Add(v8)
+v7 = (v7 + 1)
+L3d73:
+v9 = (v7 < v0)
+if v9 goto L3d4d
+return 

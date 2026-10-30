@@ -1,0 +1,77 @@
+this.Name = R:String()
+v0 = R:Int32()
+v1 = R:Int32()
+this.TileSize = new Size(v1,v0)
+this.TileIDs = new R:TypeSpec()
+this.SubPaletteIDs = new R:TypeSpec()
+this.Attributes = new R:TypeSpec()
+v2 = 0
+goto L64193
+L640e1:
+v3 = 0
+goto L64173
+L640e9:
+v4..ctor(v3,v2)
+this.TileIDs.Item[v4] = R:Int32()
+this.SubPaletteIDs.Item[v4] = R:Int32()
+this.Attributes.Item[v4] = R:UInt32()
+v5 = ((FileVersion < 263) == 0)
+if !v5 goto L6416e
+this.FlipHmap.Item[v4] = R:Boolean()
+this.FlipVmap.Item[v4] = R:Boolean()
+L6416e:
+v3 = (v3 + 1)
+L64173:
+v7 = this.TileSize
+v6 = (v3 < v7.Width)
+if v6 goto L640e9
+v2 = (v2 + 1)
+L64193:
+v7 = this.TileSize
+v8 = (v2 < v7.Height)
+if v8 goto L640e1
+this.BankID = R:Int32()
+this.TileSetID = R:Int32()
+this.PaletteID = R:Int32()
+v9 = R:Int32()
+v10 = (v9 > 0)
+if !v10 goto L64222
+v11 = R:Bytes(v9)
+v12 = new MemoryStream(v11)
+this.BitmapImage = System.Drawing.Image::FromStream(v12)
+goto L64221
+if !v12 goto L64220
+v12.Dispose()
+L64220:
+L64221:
+L64222:
+v13 = ((FileVersion < 262) == 0)
+if !v13 goto L64247
+this.IsMonsterTile = R:Boolean()
+L64247:
+v14 = ((FileVersion < 270) == 0)
+if !v14 goto L6426b
+this.Palette2ID = R:Int32()
+L6426b:
+v15 = ((FileVersion < 281) == 0)
+if !v15 goto L642c3
+this.OriginalFilename = R:String()
+this.OriginalTileX = R:Int32()
+this.OriginalTileY = R:Int32()
+this.OriginalWidth = R:Int32()
+this.OriginalHeight = R:Int32()
+L642c3:
+v16 = ((FileVersion < 297) == 0)
+if !v16 goto L642e7
+this.IsSpecialTile = R:Boolean()
+L642e7:
+v17 = ((FileVersion < 306) == 0)
+if !v17 goto L6430b
+this.IsGameObjectTile = R:Boolean()
+L6430b:
+v18 = ((FileVersion < 371) == 0)
+if !v18 goto L6433c
+this.Palette3ID = R:Int32()
+this.Palette4ID = R:Int32()
+L6433c:
+return 

@@ -1,0 +1,1432 @@
+{
+ "arrow": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    240,
+    208,
+    176
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "Backpack-export": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "Backpack": {
+  "method": "reference:Forest_Car/Backpack.png",
+  "palette": {
+   "0": [
+    8,
+    8,
+    8
+   ],
+   "1": [
+    0,
+    88,
+    0
+   ],
+   "2": [
+    80,
+    48,
+    0
+   ],
+   "3": [
+    0,
+    168,
+    68
+   ]
+  }
+ },
+ "bone": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    136,
+    20,
+    0
+   ],
+   "2": [
+    120,
+    120,
+    120
+   ],
+   "3": [
+    188,
+    188,
+    188
+   ]
+  }
+ },
+ "brazer_fire": {
+  "method": "reference:Forest_Watch_Tower_top/watchtower top_background_melt_fire_OPEN.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    152,
+    120,
+    248
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    164,
+    228,
+    252
+   ]
+  }
+ },
+ "brazer_sticks": {
+  "method": "reference:Village_BlackSmith/Village_Black_SticksinForge.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    136,
+    20,
+    0
+   ],
+   "3": [
+    136,
+    20,
+    0
+   ]
+  }
+ },
+ "bullet": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    200,
+    76,
+    12
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    248,
+    216,
+    120
+   ]
+  }
+ },
+ "Car_door-export": {
+  "method": "aligned:Forest_Car/Car_door.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "3": [
+    184,
+    184,
+    248
+   ]
+  }
+ },
+ "checkbox": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "chest": {
+  "method": "reference:Village_Market_Interior_Burnt/Market_Interior_Burnt_Chest_Closed.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    0,
+    0
+   ],
+   "2": [
+    80,
+    48,
+    0
+   ],
+   "3": [
+    172,
+    124,
+    0
+   ]
+  }
+ },
+ "cursor": {
+  "method": "reference:Cursors/Talk.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    248,
+    120,
+    88
+   ],
+   "2": [
+    255,
+    255,
+    255
+   ],
+   "3": [
+    255,
+    255,
+    255
+   ]
+  }
+ },
+ "dead_wolf": {
+  "method": "aligned:Forest_Ext_Cave/Outside_Cave_Wolf_Dead.png",
+  "palette": {
+   "0": [
+    0,
+    64,
+    88
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    184,
+    184,
+    248
+   ]
+  }
+ },
+ "DeadDeer": {
+  "method": "reference:Forest_Deer_Cliff/Background6Deer.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    168,
+    16,
+    0
+   ],
+   "2": [
+    248,
+    216,
+    120
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "DeerBlood": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    136,
+    20,
+    0
+   ],
+   "2": [
+    120,
+    120,
+    120
+   ],
+   "3": [
+    188,
+    188,
+    188
+   ]
+  }
+ },
+ "DeerLeg": {
+  "method": "aligned:Forest_Deer_Cliff/Background6DeerLeg.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "2": [
+    80,
+    48,
+    0
+   ],
+   "3": [
+    136,
+    20,
+    0
+   ]
+  }
+ },
+ "ending_angler": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    136,
+    20,
+    0
+   ],
+   "2": [
+    120,
+    120,
+    120
+   ],
+   "3": [
+    188,
+    188,
+    188
+   ]
+  }
+ },
+ "ending_blank": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "ending_dumbo": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    136,
+    20,
+    0
+   ],
+   "2": [
+    120,
+    120,
+    120
+   ],
+   "3": [
+    188,
+    188,
+    188
+   ]
+  }
+ },
+ "ending_eye_small": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    136,
+    20,
+    0
+   ],
+   "2": [
+    120,
+    120,
+    120
+   ],
+   "3": [
+    188,
+    188,
+    188
+   ]
+  }
+ },
+ "ending_hero_forward": {
+  "method": "reference:Ending/Ending_Back_Walk1.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    112,
+    0
+   ],
+   "2": [
+    0,
+    176,
+    0
+   ],
+   "3": [
+    248,
+    120,
+    88
+   ]
+  }
+ },
+ "ending_hero_side": {
+  "method": "reference:Ending/Ending_BackSide_Walk3.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    112,
+    0
+   ],
+   "2": [
+    0,
+    176,
+    0
+   ],
+   "3": [
+    248,
+    120,
+    88
+   ]
+  }
+ },
+ "explode": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    200,
+    76,
+    12
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    248,
+    216,
+    120
+   ]
+  }
+ },
+ "Forest_briar": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    64,
+    88
+   ],
+   "2": [
+    0,
+    88,
+    0
+   ],
+   "3": [
+    184,
+    248,
+    184
+   ]
+  }
+ },
+ "Forest_Briar_bush": {
+  "method": "reference:Forest_Briar/Forest_Briar_Background.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "Forest_Briar_Sticks": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    240,
+    208,
+    176
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "hidden_stairs": {
+  "method": "reference:Village_Marketplace_Locked_Bedroom/locked_marketplace_stairs_room_background.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    152,
+    120,
+    248
+   ],
+   "3": [
+    188,
+    188,
+    188
+   ]
+  }
+ },
+ "Inv_Act1_Large": {
+  "method": "reference:Village_Market_Interior_Burnt/board_for_inventory.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    172,
+    124,
+    0
+   ],
+   "3": [
+    172,
+    124,
+    0
+   ]
+  }
+ },
+ "Inv_Act1_Small": {
+  "method": "reference:Village_Market_Interior_Burnt/board_for_inventory.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    172,
+    124,
+    0
+   ],
+   "3": [
+    172,
+    124,
+    0
+   ]
+  }
+ },
+ "Inv_Act1_Tools": {
+  "method": "reference:Village_Market_Interior_Burnt/board_for_inventory.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    172,
+    124,
+    0
+   ],
+   "3": [
+    172,
+    124,
+    0
+   ]
+  }
+ },
+ "Inv_Keys": {
+  "method": "reference:Village_Barn_Office_Int/Village_Barn_Office_Int_Keys.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    172,
+    124,
+    0
+   ],
+   "2": [
+    248,
+    184,
+    0
+   ],
+   "3": [
+    248,
+    184,
+    0
+   ]
+  }
+ },
+ "Inventory UI_itemselect": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "item_select": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "machine": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "note_icon": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "player_ship": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    240,
+    208,
+    176
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "pod_door": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "portal": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    200,
+    76,
+    12
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    248,
+    216,
+    120
+   ]
+  }
+ },
+ "prologue_0": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "prologue_1": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "prologue_2": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "prologue_3": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "puppies": {
+  "method": "aligned:Forest_Inside_Cave/Forest_InsideCave_Puppies.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    64,
+    88
+   ],
+   "3": [
+    248,
+    216,
+    120
+   ]
+  }
+ },
+ "Rope_Top": {
+  "method": "reference:Forest_Watchtower_ext/watchtower_Toprope.png",
+  "palette": {
+   "0": [
+    80,
+    48,
+    0
+   ],
+   "1": [
+    172,
+    124,
+    0
+   ],
+   "2": [
+    248,
+    184,
+    0
+   ],
+   "3": [
+    248,
+    184,
+    0
+   ]
+  }
+ },
+ "S1": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "S2": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "S3": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "S4": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "S5": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "savepoint": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    200,
+    76,
+    12
+   ],
+   "2": [
+    252,
+    160,
+    68
+   ],
+   "3": [
+    248,
+    216,
+    120
+   ]
+  }
+ },
+ "snowpile": {
+  "method": "aligned:Forest_Ext_Cave/Outside_Cave_snowpile.png",
+  "palette": {
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "sword": {
+  "method": "aligned:Forest_Inside_Cave/Forest_InsideCave_Sword.png",
+  "palette": {
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "tower_wolf": {
+  "method": "reference:Forest_Watchtower_ext/wolf_alive.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    64,
+    88
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "ui_weapon": {
+  "method": "theme",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    120,
+    120,
+    120
+   ],
+   "2": [
+    188,
+    188,
+    188
+   ],
+   "3": [
+    252,
+    252,
+    252
+   ]
+  }
+ },
+ "watchtower-top_TRAPDOOR": {
+  "method": "reference:Forest_Watchtower_ext/watchtower_Tower_closed.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    84,
+    84,
+    84
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    164,
+    228,
+    252
+   ]
+  }
+ },
+ "watchtower_barel": {
+  "method": "reference:Forest_Watchtower_ext/watchtower_barrel.png",
+  "palette": {
+   "0": [
+    80,
+    48,
+    0
+   ],
+   "1": [
+    172,
+    124,
+    0
+   ],
+   "2": [
+    248,
+    184,
+    0
+   ],
+   "3": [
+    188,
+    184,
+    252
+   ]
+  }
+ },
+ "watchtower_laddar": {
+  "method": "aligned:Forest_Watchtower_ext/watchtower_laddar.png",
+  "palette": {
+   "0": [
+    80,
+    48,
+    0
+   ],
+   "2": [
+    172,
+    124,
+    0
+   ]
+  }
+ },
+ "watchtower_window": {
+  "method": "reference:Forest_Watchtower_ext/watchtower_Tower_closed.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    84,
+    84,
+    84
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    164,
+    228,
+    252
+   ]
+  }
+ },
+ "wolf": {
+  "method": "reference:Forest_Watchtower_ext/wolf_alive.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    64,
+    88
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ },
+ "wolf_insidecavef": {
+  "method": "reference:Forest_Watchtower_ext/wolf_alive.png",
+  "palette": {
+   "0": [
+    0,
+    0,
+    0
+   ],
+   "1": [
+    0,
+    64,
+    88
+   ],
+   "2": [
+    184,
+    184,
+    248
+   ],
+   "3": [
+    252,
+    224,
+    168
+   ]
+  }
+ }
+}

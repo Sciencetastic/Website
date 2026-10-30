@@ -1,0 +1,13 @@
+this.TextGroupEntries.Clear()
+v0 = R:Int32()
+v1 = 0
+goto Lc81b9
+Lc8198:
+v2 = new TextGroupEntry()
+v2.Recall(a1)
+this.TextGroupEntries.Add(v2)
+v1 = (v1 + 1)
+Lc81b9:
+v3 = (v1 < v0)
+if v3 goto Lc8198
+return 
