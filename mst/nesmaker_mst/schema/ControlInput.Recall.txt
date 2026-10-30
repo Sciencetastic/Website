@@ -1,0 +1,10 @@
+this.Input = R:Byte()
+this.AnyInput = R:Boolean()
+this.InputStyleAction = R:Int32()
+this.IsController2 = R:Boolean()
+this.GameState.Recall(a1)
+this.InputTarget.Recall(a1)
+this.InputResult.Recall(a1)
+this.ActionScript.Recall(a1)
+this.ScriptParam.Recall(a1)
+return 

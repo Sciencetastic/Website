@@ -1,0 +1,19 @@
+v0 = R:Int32()
+v1 = 0
+goto L6a321
+L6a2e0:
+v2 = R:Int32()
+v3 = R:String()
+v4 = new R:TypeSpec(v2,v3)
+v5 = (a1.Count > v1)
+if !v5 goto L6a313
+a1.Item[v1] = v4
+goto L6a31c
+L6a313:
+a1.Add(v4)
+L6a31c:
+v1 = (v1 + 1)
+L6a321:
+v6 = (v1 < v0)
+if v6 goto L6a2e0
+return 

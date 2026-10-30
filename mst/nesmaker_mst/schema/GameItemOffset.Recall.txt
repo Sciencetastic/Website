@@ -1,0 +1,5 @@
+this.WeaponOffsetX = R:Bytes(8)
+this.WeaponOffsetY = R:Bytes(8)
+this.ProjSourceOffsetX = R:Bytes(8)
+this.ProjSourceOffsetY = R:Bytes(8)
+return 

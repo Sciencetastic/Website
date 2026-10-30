@@ -1,0 +1,21 @@
+v0 = R:Int32()
+v1..ctor(R:Bytes(v0))
+this.Name = R:String()
+this.Voice = R:Int32()
+v3 = ((FileVersion < 357) == 0)
+if !v3 goto L313ee
+this.Length = R:Int32()
+L313ee:
+this.Melody.Clear()
+v2 = R:Int32()
+v4 = 0
+goto L3142c
+L31406:
+v5 = new Note()
+v5.Recall(a1)
+this.Melody.Add(v5)
+v4 = (v4 + 1)
+L3142c:
+v6 = (v4 < v2)
+if v6 goto L31406
+return 

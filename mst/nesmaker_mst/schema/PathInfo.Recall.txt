@@ -1,0 +1,8 @@
+this.BankID = R:Int32()
+this.TileSetID = R:Int32()
+this.PathID = R:Int32()
+this.PaletteID = R:Int32()
+this.SubPaletteID = R:Int32()
+this.SupportSubPaletteID = R:Int32()
+this.Attribute = R:UInt32()
+return 

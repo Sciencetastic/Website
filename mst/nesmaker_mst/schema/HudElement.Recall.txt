@@ -1,0 +1,32 @@
+this.Name = R:String()
+this.ElementType = R:Byte()
+this.X = R:Byte()
+this.Y = R:Byte()
+this.EMPTY_IMAGE = R:Byte()
+this.FULL_IMAGE = R:Byte()
+this.STRING = R:String()
+this.MAX_VALUE = R:Byte()
+this.BLANK = R:Byte()
+this.ROW = R:Byte()
+this.COL = R:Byte()
+v0 = R:Int32()
+v1..ctor(R:Bytes(v0))
+v2 = System.Guid::op_Inequality(v1,Empty)
+if !v2 goto L22c9a
+v3 = MainModel.HudInfo.HudAssets.GetEnumerator()
+goto L22c7f
+L22c55:
+v4 = v3.Current
+v5 = System.Guid::op_Equality(v4.ID,v1)
+if !v5 goto L22c7e
+this.Asset = v4
+goto L22c88
+L22c7e:
+L22c7f:
+if v3.MoveNext() goto L22c55
+L22c88:
+goto L22c99
+v3.Dispose()
+L22c99:
+L22c9a:
+return 

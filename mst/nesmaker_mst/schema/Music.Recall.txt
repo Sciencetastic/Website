@@ -1,0 +1,34 @@
+v0 = R:Int32()
+this.AllSongs.Clear()
+v1 = 0
+goto L30d46
+L30d2c:
+v2 = TypeSpec::RecallNew(a1)
+this.AllSongs.Add(v2)
+v1 = (v1 + 1)
+L30d46:
+v3 = (v1 < v0)
+if v3 goto L30d2c
+v0 = R:Int32()
+this.AllParts.Clear()
+v4 = 0
+goto L30d84
+L30d66:
+v5 = TypeSpec::RecallNew(a1)
+this.AllParts.Add(v5)
+v4 = (v4 + 1)
+L30d84:
+v6 = (v4 < v0)
+if v6 goto L30d66
+v0 = R:Int32()
+this.AllVoiceMelodies.Clear()
+v7 = 0
+goto L30dc5
+L30da7:
+v8 = TypeSpec::RecallNew(a1)
+this.AllVoiceMelodies.Add(v8)
+v7 = (v7 + 1)
+L30dc5:
+v9 = (v7 < v0)
+if v9 goto L30da7
+return 

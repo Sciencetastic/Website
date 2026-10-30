@@ -1,0 +1,8 @@
+this.Name = R:String()
+this.Define = R:String()
+this.Script = R:String()
+v0 = ((FileVersion < 360) == 0)
+if !v0 goto L6c19a
+this.Group = R:String()
+L6c19a:
+return 

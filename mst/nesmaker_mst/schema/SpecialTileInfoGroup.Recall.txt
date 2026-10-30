@@ -1,0 +1,16 @@
+v0 = R:Int32()
+v1 = 0
+goto Lc3edc
+Lc3ea8:
+v2 = new SpecialTileInfo()
+v2.Recall(a1)
+v3 = (v2.BankID == 0)
+if !v3 goto Lc3ece
+v2.BankID = (v1 + 1)
+Lc3ece:
+this.SpecialTileInfos[v1] = v2
+v1 = (v1 + 1)
+Lc3edc:
+v4 = (v1 < v0)
+if v4 goto Lc3ea8
+return 

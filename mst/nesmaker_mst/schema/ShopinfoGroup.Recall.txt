@@ -1,0 +1,12 @@
+v0 = R:Int32()
+v1 = 0
+goto Lbb489
+Lbb46c:
+v2 = new Shopinfo()
+v2.Recall(a1)
+this.Shops[v1] = v2
+v1 = (v1 + 1)
+Lbb489:
+v3 = (v1 < v0)
+if v3 goto Lbb46c
+return 

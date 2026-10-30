@@ -1,0 +1,8 @@
+this.ID = R:Int32()
+this.Name = R:String()
+this.colors[0] = R:Int32()
+this.colors[1] = R:Int32()
+this.colors[2] = R:Int32()
+this.colors[3] = R:Int32()
+this.RefreshIcon()
+return 

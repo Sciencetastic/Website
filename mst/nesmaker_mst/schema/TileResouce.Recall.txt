@@ -1,0 +1,6 @@
+this.BankID = R:Int32()
+this.GroupID = R:Int32()
+this.TileType = R:String()
+this.Name = R:String()
+this.Display = R:String()
+return 

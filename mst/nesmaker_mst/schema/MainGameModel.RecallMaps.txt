@@ -1,0 +1,47 @@
+v0 = R:Int32()
+FileVersion = R:Int32()
+v4 = ((v0 == -559084115) == 0)
+if !v4 goto L6ba3a
+goto L6bb4b
+L6ba3a:
+v1 = R:Int32()
+v2 = R:Int32()
+v3 = R:Int32()
+v5 = 0
+goto L6ba94
+L6ba54:
+v6 = R:Int32()
+v7..ctor(R:Bytes(v6))
+v8 = new ScreenInfo(0)
+v8.Recall(a1)
+this.Screens.Item[v7] = v8
+v5 = (v5 + 1)
+L6ba94:
+v9 = (v5 < v1)
+if v9 goto L6ba54
+v10 = 0
+goto L6baea
+L6baa4:
+v11 = R:Int32()
+v12 = R:Int32()
+v13 = R:Int32()
+v14..ctor(R:Bytes(v13))
+this.OverworldMap.Item[new Point(v11,v12)] = v14
+v10 = (v10 + 1)
+L6baea:
+v15 = (v10 < v2)
+if v15 goto L6baa4
+v16 = 0
+goto L6bb40
+L6bafa:
+v17 = R:Int32()
+v18 = R:Int32()
+v19 = R:Int32()
+v20..ctor(R:Bytes(v19))
+this.UnderworldMap.Item[new Point(v17,v18)] = v20
+v16 = (v16 + 1)
+L6bb40:
+v21 = (v16 < v3)
+if v21 goto L6bafa
+L6bb4b:
+return 

@@ -1,0 +1,6 @@
+v0 = R:Int32()
+v1 = R:Int32()
+this.Location = new Point(v0,v1)
+this.ChangeID = R:Byte()
+this.Attribute = R:Byte()
+return 

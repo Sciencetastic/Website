@@ -1,0 +1,20 @@
+this.Monsters = new tok1000044[4]
+this.Name = R:String()
+this.ID = R:Int32()
+v0 = R:Int32()
+v1 = 0
+goto L7487b
+L74853:
+v2 = R:Int32()
+v3..ctor(R:Bytes(v2))
+this.Monsters[v1] = v3
+v1 = (v1 + 1)
+L7487b:
+v4 = (v1 < v0)
+if v4 goto L74853
+v5 = ((FileVersion < 272) == 0)
+if !v5 goto L748b6
+this.BankID = R:Int32()
+this.TilesetID = R:Int32()
+L748b6:
+return 
