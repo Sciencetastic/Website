@@ -1,0 +1,3 @@
+this.Name = R:String()
+this.SFXOffset = R:Int32()
+return 

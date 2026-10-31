@@ -1,0 +1,99 @@
+this.ID = R:Int32()
+this.Name = R:String()
+v0 = R:Int32()
+v1 = R:Int32()
+this.Monstersize = new Size(v0,v1)
+this.GraphicBank = R:Int32()
+this.TilesetID1 = R:Int32()
+this.TilesetID2 = R:Int32()
+v2 = R:Int32()
+v3 = R:Int32()
+this.AnimationBag.Clear()
+this.AnimationTypeList.Clear()
+v4 = 0
+goto L737f4
+L73720:
+v5 = new M:<>c__DisplayClass208_0()
+v6 = R:String()
+v5.ma = new MonsterAnimation(0)
+v5.ma.Recall(a1)
+?? ldftn M:<>c__DisplayClass208_0::<Recall>b__0
+if <>9__208_1 goto L73782
+?? ldftn M:<>c::<Recall>b__208_1
+<>9__208_1 = new R:TypeSpec(R:System.Linq.Enumerable::Where(?,new R:TypeSpec(this.AnimationBag,v5)),<>9)
+L73782:
+v7 = R:System.Linq.Enumerable::Count(R:System.Linq.Enumerable::Select(?,new R:TypeSpec(R:System.Linq.Enumerable::Where(?,new R:TypeSpec(this.AnimationBag,v5)),<>9)))
+v8 = (v7 > 0)
+if !v8 goto L737d8
+if <>9__208_2 goto L737c6
+?? ldftn M:<>c::<Recall>b__208_2
+<>9__208_2 = new R:TypeSpec(this.AnimationBag,<>9)
+L737c6:
+?.ID = (System.Linq.Enumerable::Max(R:System.Linq.Enumerable::Select(v5.ma,new R:TypeSpec(this.AnimationBag,<>9))) + 1)
+L737d8:
+this.AnimationBag.Item[v6] = v5.ma
+v4 = (v4 + 1)
+L737f4:
+v9 = (v4 < v2)
+if v9 goto L73720
+v10 = 0
+goto L7382e
+L73807:
+v11 = new MonsterAnimationType(0)
+v11.Recall(a1)
+this.AnimationTypeList.Add(v11)
+v10 = (v10 + 1)
+L7382e:
+v12 = (v10 < v3)
+if v12 goto L73807
+this.MonsterActions.Recall(a1)
+v13 = ((FileVersion < 268) == 0)
+if !v13 goto L7396c
+this.DepthInPixels = R:Byte()
+this.NormalMaxSpeed = R:Byte()
+v14 = R:Byte()
+this.AccelSpeed = R:Byte()
+this.JumpSpeed = R:Byte()
+this.Health = R:Byte()
+this.Experience = R:Byte()
+this.Strength = R:Byte()
+this.Defense = R:Byte()
+this.SolidObjectReaction = R:Byte()
+this.EdgeObjectReaction = R:Byte()
+this.HurtReaction = R:Byte()
+this.SpawnType = R:Byte()
+this.WidthInPixels = R:Byte()
+this.HeightInPixels = R:Byte()
+this.BoundingBoxLeft = R:Byte()
+this.BoundingBoxTop = R:Byte()
+this.HitBoxTop = R:Byte()
+this.HitBoxLeft = R:Byte()
+this.HitBoxBottom = R:Byte()
+this.HitBoxRight = R:Byte()
+L7396c:
+v15 = ((FileVersion < 275) == 0)
+if !v15 goto L7399d
+this.DesiredPalette1ID = R:Byte()
+this.DesiredPalette2ID = R:Byte()
+L7399d:
+v16 = ((FileVersion < 321) == 0)
+if !v16 goto L739c1
+this.ObjectFlags = R:Byte()
+L739c1:
+v17 = ((FileVersion < 371) == 0)
+if !v17 goto L739f2
+this.DesiredPalette3ID = R:Byte()
+this.DesiredPalette4ID = R:Byte()
+L739f2:
+v18 = ((FileVersion < 374) == 0)
+if !v18 goto L73a71
+this.MonsterBit0 = R:Boolean()
+this.MonsterBit1 = R:Boolean()
+this.MonsterBit2 = R:Boolean()
+this.MonsterBit3 = R:Boolean()
+this.MonsterBit4 = R:Boolean()
+this.MonsterBit5 = R:Boolean()
+this.MonsterBit6 = R:Boolean()
+this.MonsterBit7 = R:Boolean()
+L73a71:
+return 

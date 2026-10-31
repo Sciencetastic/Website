@@ -1,0 +1,14 @@
+this.BankID = R:Int32()
+v0 = R:Int32()
+this.TilesetDetails.Clear()
+v1 = 0
+goto L9dd6
+L9db5:
+v2 = new AnimationTileDetailInfo()
+v2.Recall(a1)
+this.TilesetDetails.Add(v2)
+v1 = (v1 + 1)
+L9dd6:
+v3 = (v1 < v0)
+if v3 goto L9db5
+return 

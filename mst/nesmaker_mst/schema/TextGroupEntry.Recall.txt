@@ -1,0 +1,9 @@
+this.Name = R:String()
+this.Index1 = R:Int32()
+this.Index2 = R:Int32()
+this.Index3 = R:Int32()
+v0 = ((FileVersion < 329) == 0)
+if !v0 goto Lc82f5
+this.Index4 = R:Int32()
+Lc82f5:
+return 

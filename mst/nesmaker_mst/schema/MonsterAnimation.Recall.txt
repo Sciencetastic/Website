@@ -1,0 +1,17 @@
+v0 = R:Int32()
+this.Frames = new R:TypeSpec()
+v1 = 0
+goto L75450
+L7542f:
+v2 = new MonsterFrame()
+v2.Recall(a1)
+this.Frames.Add(v2)
+v1 = (v1 + 1)
+L75450:
+v3 = (v1 < v0)
+if v3 goto L7542f
+v4 = ((FileVersion < 267) == 0)
+if !v4 goto L7547b
+this.ID = R:Int32()
+L7547b:
+return 

@@ -1,0 +1,13 @@
+v0 = R:Int32()
+this.UserRAMReservation.Clear()
+v1 = 0
+goto L6c5f5
+L6c5d4:
+v2 = new UserDefinedVar()
+v2.Recall(a1)
+this.UserRAMReservation.Add(v2)
+v1 = (v1 + 1)
+L6c5f5:
+v3 = (v1 < v0)
+if v3 goto L6c5d4
+return 

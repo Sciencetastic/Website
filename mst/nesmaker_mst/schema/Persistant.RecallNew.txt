@@ -1,0 +1,6 @@
+v0 = R:System.Activator::CreateInstance()
+v0.Recall(this)
+v1 = v0
+goto L31536
+L31536:
+return v1

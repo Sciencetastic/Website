@@ -1,0 +1,14 @@
+v0 = R:Int32()
+v1 = 0
+goto L75649
+L75610:
+v2 = R:Int32()
+v3 = R:Int32()
+v4 = new MonsterTile()
+v4.Recall(a1)
+this.Tiles.Item[new Point(v2,v3)] = v4
+v1 = (v1 + 1)
+L75649:
+v5 = (v1 < v0)
+if v5 goto L75610
+return 

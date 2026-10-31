@@ -1,0 +1,94 @@
+file,size,palette_pass,conflicting_blocks,palette_groups_needed,unique_8x8_pattern_lower_bound,within_192_tile_art_budget
+alchemist_house.png,112x112,True,0,3,160,True
+alchemist_house_door_open.png,112x112,True,0,1,158,True
+Angular_Death_1.png,160x144,True,0,1,191,True
+Barn.png,112x112,True,0,4,192,True
+black.png,160x144,True,0,1,1,True
+Black_BG.png,160x144,True,0,3,25,True
+burnt_bedroom.png,112x112,True,0,4,193,False
+Burnt_LittleGirl.png,112x112,True,0,4,193,False
+car2.png,112x112,True,0,4,183,True
+Cellar_Candle_Death.png,160x144,True,0,1,177,True
+collapsed-barn.png,112x112,True,0,2,193,False
+CU1.png,160x144,True,0,2,189,True
+CU4.png,160x144,True,0,2,183,True
+CU5.png,160x144,True,0,2,191,True
+Face_Eaten.png,160x144,True,0,2,190,True
+Fall_Backswitch.png,160x144,True,0,4,163,True
+field.png,112x112,True,0,4,91,True
+Forest_Briar.png,112x112,True,0,4,193,False
+Forest_Briar_nocut.png,112x112,True,0,4,193,False
+Forest_Cave_Death_F1.png,160x144,True,0,2,147,True
+Forest_Cave_Death_f2.png,160x144,True,0,1,80,True
+Forest_Cave_Death_F3.png,160x144,True,0,1,1,True
+Forest_inside_watchtower_Dark.png,112x112,True,0,4,195,False
+Forest_inside_watchtower_LIGHT.png,112x112,True,0,4,193,False
+Forest_Start.png,112x112,True,0,4,186,True
+Gameboy Graphic.png,160x144,True,0,4,155,True
+inside_cave.png,112x112,True,0,4,130,True
+Inventory UI_Blank.png,160x144,True,0,4,81,True
+Inventory UI_Diary_Page.png,160x144,True,0,4,97,True
+Inventory UI_FOLIO_Journal_Select.png,160x144,True,0,4,105,True
+Inventory UI_FOLIO_select_blank.png,160x144,True,0,4,130,True
+Inventory UI_KEYS_select_blank.png,160x144,True,0,3,102,True
+Inventory UI_LARGE_select.png,160x144,True,0,3,103,True
+Inventory UI_LARGE_select2.png,160x144,True,0,3,103,True
+Inventory UI_Notes_Select.png,160x144,True,0,4,103,True
+Inventory UI_SMALL_select_blank.png,160x144,True,0,3,102,True
+Inventory UI_TOOLS_select_blank.png,160x144,True,0,3,82,True
+locked_marketplace_stairs_room.png,112x112,True,0,4,181,True
+logo.png,160x144,True,0,1,146,True
+Market_Interior_Burnt.png,112x112,True,0,4,176,True
+Market_Place_Death.png,160x144,True,0,2,129,True
+Mine_Dark_Room_Dark.png,112x112,True,0,1,136,True
+Mine_Dark_Room_Light.png,112x112,True,0,3,168,True
+Mine_Death.png,160x144,True,0,1,147,True
+Mine_Entrance.png,112x112,True,0,4,197,False
+Mine_Pool.png,112x112,True,0,4,195,False
+Mine_Split.png,112x112,True,0,4,196,False
+Mine_Temple_Entrance.png,112x112,True,0,4,178,True
+Mine_Temple_Flame_death.png,160x144,True,0,3,190,True
+Opening_1.png,160x144,True,0,2,190,True
+Opening_2.png,160x144,True,0,3,190,True
+Opening_3.png,160x144,True,0,2,192,True
+Opening_4.png,160x144,True,0,1,192,True
+Opening_5.png,160x144,True,0,4,185,True
+OpenMine.png,112x112,True,0,4,141,True
+Outside_Cave_Wolf.png,112x112,True,0,4,178,True
+Outside_Cave_Wolf_Dead.png,112x112,True,0,4,177,True
+Priest_House.png,112x112,True,0,4,183,True
+PriestHouseIntb.png,112x112,True,0,4,178,True
+Puz.png,112x112,True,0,4,92,True
+Switchback.png,112x112,True,0,4,185,True
+Tavern.png,112x112,True,0,4,183,True
+Tavern_Window.png,112x112,True,0,4,197,False
+tentacle_Death.png,160x144,True,0,2,187,True
+Throne_Dark.png,112x112,True,0,4,143,True
+Throne_Empty.png,112x112,True,0,3,187,True
+Throne_Light.png,112x112,True,0,4,188,True
+Throne_Settle.png,112x112,True,0,4,188,True
+titlescreen.png,160x144,True,0,2,191,True
+Village_Alchemist_Int_Master_book.png,112x112,True,0,4,195,False
+Village_Alchemist_Int_Master_nobook.png,112x112,True,0,4,195,False
+Village_Barn_Interior.png,112x112,True,0,4,196,False
+Village_Barn_Office_Ext.png,112x112,True,0,4,185,True
+Village_Barn_Office_Int.png,112x112,True,0,4,196,False
+Village_Black_Smith.png,112x112,True,0,2,159,True
+Village_Cages.png,112x112,True,0,4,195,False
+Village_Carrol.png,112x112,True,0,4,180,True
+Village_Ext_Market_Closed.png,112x112,True,0,4,193,False
+Village_Ext_Market_Open.png,112x112,True,0,4,192,True
+Village_Farm.png,112x112,True,0,4,190,True
+village_merch_bedroom.png,112x112,True,0,4,187,True
+Village_Ruined_House_Background_empty.png,112x112,True,0,4,186,True
+Village_shacks.png,112x112,True,0,4,185,True
+Village_Tavern.png,112x112,True,0,3,193,False
+Village_Temple.png,112x112,True,0,4,143,True
+Village_View_Master.png,112x112,True,0,4,190,True
+Village_Work_Bench.png,112x112,True,0,2,158,True
+VillageValley.png,112x112,True,0,2,101,True
+VillageValley_DEER_1.png,112x112,True,0,4,196,False
+VillageValley_DEER_2.png,112x112,True,0,3,196,False
+watchtower-top.png,112x112,True,0,4,149,True
+watchtower_Tower.png,112x112,True,0,4,125,True
+wolf_bite.png,160x144,True,0,2,177,True

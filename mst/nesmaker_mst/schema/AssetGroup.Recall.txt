@@ -1,0 +1,14 @@
+this.Assets.Clear()
+this.Name = R:String()
+v0 = R:Int32()
+v1 = 0
+goto L65b31
+L65b09:
+v2 = R:Int32()
+v3..ctor(R:Bytes(v2))
+this.Assets.Add(v3)
+v1 = (v1 + 1)
+L65b31:
+v4 = (v1 < v0)
+if v4 goto L65b09
+return 

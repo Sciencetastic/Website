@@ -1,0 +1,26 @@
+v0 = R:Int32()
+this.HighRes = new tok10000ec[v0]
+v1 = 0
+goto L6c7f3
+L6c7dd:
+v2 = R:Boolean()
+this.HighRes[v1] = v2
+v1 = (v1 + 1)
+L6c7f3:
+v3 = (v1 < v0)
+if v3 goto L6c7dd
+v4 = ((FileVersion < 368) == 0)
+if !v4 goto L6c851
+v0 = R:Int32()
+this.HighResUnder = new tok10000ec[v0]
+v5 = 0
+goto L6c845
+L6c82a:
+v6 = R:Boolean()
+this.HighResUnder[v5] = v6
+v5 = (v5 + 1)
+L6c845:
+v7 = (v5 < v0)
+if v7 goto L6c82a
+L6c851:
+return 

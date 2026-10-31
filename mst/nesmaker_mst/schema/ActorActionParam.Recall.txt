@@ -1,0 +1,21 @@
+this.ID = R:Int32()
+this.Name = R:String()
+v0 = R:Int32()
+v1 = v0
+switch v1 -> ['L428c', 'L42a0', 'L42af']
+goto L42cf
+L428c:
+this.Value = R:Int32()
+goto L42d1
+L42a0:
+this.Value = R:String()
+goto L42d1
+L42af:
+this.Value = new ActionParamOption()
+this.Value.Recall(a1)
+goto L42d1
+L42cf:
+goto L42d1
+L42d1:
+this.ParamType = R:Int32()
+return 

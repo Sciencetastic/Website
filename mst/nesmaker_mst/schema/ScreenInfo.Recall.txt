@@ -1,0 +1,284 @@
+this.BankID = R:Int32()
+v0 = R:Int32()
+this.TileData = new tok10000ed[v0]
+v5 = 0
+goto La77d6
+La77bf:
+this.TileData[v5] = R:Int32()
+v5 = (v5 + 1)
+La77d6:
+v6 = (v5 < v0)
+if v6 goto La77bf
+this.PaletteID = R:Int32()
+v1 = R:Int32()
+this.SubPaletteData = new tok10000ed[v1]
+v7 = 0
+goto La781e
+La7807:
+this.SubPaletteData[v7] = R:Int32()
+v7 = (v7 + 1)
+La781e:
+v8 = (v7 < v1)
+if v8 goto La7807
+v2 = R:Int32()
+this.AttributeData = new tok1000134[v2]
+v9 = 0
+goto La7859
+La7842:
+this.AttributeData[v9] = R:UInt32()
+v9 = (v9 + 1)
+La7859:
+v10 = (v9 < v2)
+if v10 goto La7842
+v3 = R:Int32()
+this.ScreenGuid = new Guid(R:Bytes(v3))
+v4 = R:Boolean()
+v11 = v4
+if !v11 goto La78cf
+v12 = R:Int32()
+v13 = R:Bytes(v12)
+v14 = new MemoryStream(v13)
+this.ScreenBmp = System.Drawing.Image::FromStream(v14)
+goto La78ce
+if !v14 goto La78cd
+v14.Dispose()
+La78cd:
+La78ce:
+La78cf:
+this.TileSetMainID = R:Int32()
+this.TileSetScreenID = R:Int32()
+this.TileSetPathID = R:Int32()
+this.ShowHUD = R:Boolean()
+v15 = ((FileVersion < 259) == 0)
+if !v15 goto La7982
+this.ObjectsToLoadID = R:Byte()
+this.MaxMonsterCount = R:Byte()
+this.MonstersToLoadID = R:Byte()
+this.ObjectPaletteDay1ID = R:Byte()
+this.ObjectPaletteDay2ID = R:Byte()
+this.MonstersRespawn = R:Boolean()
+this.UseDayNight = R:Boolean()
+this.UsePathes = R:Boolean()
+La7982:
+v16 = ((FileVersion < 260) == 0)
+if !v16 goto La79e4
+this.ChangeTileList.Clear()
+v17 = R:Int32()
+v18 = 0
+goto La79d7
+La79b1:
+v19 = new ChangeTileInfo()
+v19.Recall(a1)
+this.ChangeTileList.Add(v19)
+v18 = (v18 + 1)
+La79d7:
+v20 = (v18 < v17)
+if v20 goto La79b1
+La79e4:
+v21 = ((FileVersion < 266) == 0)
+if !v21 goto La7a22
+this.ScreenSpeed = R:Byte()
+this.DayMonsterBank = R:Byte()
+this.NightMonsterBank = R:Byte()
+La7a22:
+v22 = ((FileVersion < 271) == 0)
+if !v22 goto La7a53
+this.ObjectPaletteNight1ID = R:Byte()
+this.ObjectPaletteNight2ID = R:Byte()
+La7a53:
+v23 = ((FileVersion < 273) == 0)
+if !v23 goto La7aa2
+v24 = R:Int32()
+this.DayMonsterGroup = new Guid(R:Bytes(v24))
+v24 = R:Int32()
+this.NightMonsterGroup = new Guid(R:Bytes(v24))
+La7aa2:
+v25 = ((FileVersion < 277) == 0)
+if !v25 goto La7ad5
+v26 = R:Int32()
+this.PathGroup = new Guid(R:Bytes(v26))
+La7ad5:
+v27 = ((FileVersion < 288) == 0)
+if !v27 goto La7b71
+this.WarpOutScreenX = R:Int32()
+this.WarpOutScreenY = R:Int32()
+this.WarpInScreenLocX = R:Int32()
+this.WarpInScreenLocY = R:Int32()
+this.SongIndex = R:Int32()
+this.NPCDangerDay = R:Int32()
+this.NPCDangerNight = R:Int32()
+this.NPCSavedDay = R:Int32()
+this.NPCSavedNight = R:Int32()
+this.WarpToUnderworld = R:Boolean()
+La7b71:
+v28 = ((FileVersion < 289) == 0)
+if !v28 goto La7ba2
+this.IsBossRoom = R:Boolean()
+this.IsDarkRoom = R:Boolean()
+La7ba2:
+v29 = ((FileVersion < 291) == 0)
+if !v29 goto La7dbb
+this.ScreenType = R:Byte()
+this.ObjectPaletteTriggeredDay1ID = R:Byte()
+this.ObjectPaletteTriggeredNight1ID = R:Byte()
+this.ObjectPaletteTriggeredDay2ID = R:Byte()
+this.ObjectPaletteTriggeredNight2ID = R:Byte()
+this.DayTriggeredMonsterBank = R:Byte()
+this.NightTriggeredMonsterBank = R:Byte()
+v30 = R:Int32()
+this.DayTriggeredMonsterGroup = new Guid(R:Bytes(v30))
+v30 = R:Int32()
+this.NightTriggeredMonsterGroup = new Guid(R:Bytes(v30))
+this.Monster1DayNormalX = R:Byte()
+this.Monster1DayNormalY = R:Byte()
+this.Monster2DayNormalX = R:Byte()
+this.Monster2DayNormalY = R:Byte()
+this.Monster3DayNormalX = R:Byte()
+this.Monster3DayNormalY = R:Byte()
+this.Monster1NightNormalX = R:Byte()
+this.Monster1NightNormalY = R:Byte()
+this.Monster2NightNormalX = R:Byte()
+this.Monster2NightNormalY = R:Byte()
+this.Monster3NightNormalX = R:Byte()
+this.Monster3NightNormalY = R:Byte()
+this.Monster1DayTriggeredX = R:Byte()
+this.Monster1DayTriggeredY = R:Byte()
+this.Monster2DayTriggeredX = R:Byte()
+this.Monster2DayTriggeredY = R:Byte()
+this.Monster3DayTriggeredX = R:Byte()
+this.Monster3DayTriggeredY = R:Byte()
+this.Monster1NightTriggeredX = R:Byte()
+this.Monster1NightTriggeredY = R:Byte()
+this.Monster2NightTriggeredX = R:Byte()
+this.Monster2NightTriggeredY = R:Byte()
+this.Monster3NightTriggeredX = R:Byte()
+this.Monster3NightTriggeredY = R:Byte()
+this.StringGroupIndexDay = R:Byte()
+this.StringGroupIndexNight = R:Byte()
+this.StringGroupIndexDayTriggered = R:Byte()
+this.StringGroupIndexNightTriggered = R:Byte()
+La7dbb:
+v31 = ((FileVersion < 295) == 0)
+if !v31 goto La7dec
+this.IsAnimated = R:Boolean()
+this.IsUnderground = R:Boolean()
+La7dec:
+v32 = ((FileVersion < 308) == 0)
+if !v32 goto La7e10
+this.ShowTextOnLoad = R:Boolean()
+La7e10:
+v33 = ((FileVersion < 329) == 0)
+if !v33 goto La7f62
+this.Monster4DayNormalX = R:Byte()
+this.Monster4DayNormalY = R:Byte()
+this.Monster4NightNormalX = R:Byte()
+this.Monster4NightNormalY = R:Byte()
+this.Monster4DayTriggeredX = R:Byte()
+this.Monster4DayTriggeredY = R:Byte()
+this.Monster4NightTriggeredX = R:Byte()
+this.Monster4NightTriggeredY = R:Byte()
+this.Monster1IDDay = R:Byte()
+this.Monster2IDDay = R:Byte()
+this.Monster3IDDay = R:Byte()
+this.Monster4IDDay = R:Byte()
+this.Monster1IDDayTr = R:Byte()
+this.Monster2IDDayTr = R:Byte()
+this.Monster3IDDayTr = R:Byte()
+this.Monster4IDDayTr = R:Byte()
+this.Monster1IDNight = R:Byte()
+this.Monster2IDNight = R:Byte()
+this.Monster3IDNight = R:Byte()
+this.Monster4IDNight = R:Byte()
+this.Monster1IDNightTr = R:Byte()
+this.Monster2IDNightTr = R:Byte()
+this.Monster3IDNightTr = R:Byte()
+this.Monster4IDNightTr = R:Byte()
+La7f62:
+v34 = ((FileVersion < 336) == 0)
+if !v34 goto La7fad
+this.SongIndexDN = R:Byte()
+this.SongIndexDT = R:Byte()
+this.SongIndexNN = R:Byte()
+this.SongIndexNT = R:Byte()
+La7fad:
+v35 = ((FileVersion < 340) == 0)
+if !v35 goto La7ff8
+this.MonsterStateDay = R:Byte()
+this.MonsterStateDayTr = R:Byte()
+this.MonsterStateNight = R:Byte()
+this.MonsterStateNightTr = R:Byte()
+La7ff8:
+v36 = ((FileVersion < 352) == 0)
+if !v36 goto La8077
+this.UserScreenByte0 = R:Byte()
+this.UserScreenByte1 = R:Byte()
+this.UserScreenByte2 = R:Byte()
+this.UserScreenByte3 = R:Byte()
+this.UserScreenByte4 = R:Byte()
+this.UserScreenByte5 = R:Byte()
+this.UserScreenByte6 = R:Byte()
+this.UserScreenByte7 = R:Byte()
+La8077:
+v37 = ((FileVersion < 353) == 0)
+if !v37 goto La80a8
+this.SpecialTileType1 = R:Byte()
+this.SpecialTileType2 = R:Byte()
+La80a8:
+v38 = ((FileVersion < 354) == 0)
+if !v38 goto La8123
+this.TilesetLayoutID = R:Int32()
+v39 = R:Int32()
+this.TilesetLayout.Clear()
+v40 = 0
+goto La8111
+La80e4:
+v41 = R:Int32()
+v42 = R:Int32()
+this.TilesetLayout.Add(new R:TypeSpec(v41,v42))
+v40 = (v40 + 1)
+La8111:
+v43 = (v40 < v39)
+if v43 goto La80e4
+goto La81a6
+La8123:
+this.TilesetLayoutID = 0
+this.TilesetLayout.Clear()
+v44 = (this.TileSetMainID + ((this.BankID - 1) * 6))
+this.TilesetLayout.Add(new R:TypeSpec(0,v44))
+v45 = (this.TileSetScreenID + ((this.BankID - 1) * 10))
+this.TilesetLayout.Add(new R:TypeSpec(1,v45))
+v46 = (this.BankID - 1)
+this.TilesetLayout.Add(new R:TypeSpec(2,v46))
+La81a6:
+v47 = ((FileVersion < 368) == 0)
+if !v47 goto La81d7
+this.ScreenWidth = R:Int32()
+this.ScreenHeight = R:Int32()
+La81d7:
+v48 = ((FileVersion < 369) == 0)
+if !v48 goto La81fb
+this.GameState = R:Int32()
+La81fb:
+v49 = ((FileVersion < 372) == 0)
+if !v49 goto La827a
+this.UserScreenFlag0 = R:Boolean()
+this.UserScreenFlag1 = R:Boolean()
+this.UserScreenFlag2 = R:Boolean()
+this.UserScreenFlag3 = R:Boolean()
+this.UserScreenFlag4 = R:Boolean()
+this.UserScreenFlag5 = R:Boolean()
+this.UserScreenFlag6 = R:Boolean()
+this.UserScreenFlag7 = R:Boolean()
+La827a:
+v50 = ((FileVersion < 373) == 0)
+if !v50 goto La82f9
+this.ObjectPaletteDay3ID = R:Byte()
+this.ObjectPaletteDay4ID = R:Byte()
+this.ObjectPaletteNight3ID = R:Byte()
+this.ObjectPaletteNight4ID = R:Byte()
+this.ObjectPaletteTriggeredDay3ID = R:Byte()
+this.ObjectPaletteTriggeredDay4ID = R:Byte()
+this.ObjectPaletteTriggeredNight3ID = R:Byte()
+this.ObjectPaletteTriggeredNight4ID = R:Byte()
+La82f9:
+return 

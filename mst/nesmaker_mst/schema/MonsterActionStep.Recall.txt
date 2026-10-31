@@ -1,0 +1,11 @@
+this.ActionTypeID = R:Int32()
+this.AnimationSpeed = R:Byte()
+this.AnimationGroupOffset = R:Byte()
+this.EndAnimationType = R:Byte()
+this.EndActionType = R:Byte()
+this.Vulnerability = R:Byte()
+v0 = ((FileVersion < 313) == 0)
+if !v0 goto L75195
+this.ActionTimer = R:Byte()
+L75195:
+return 

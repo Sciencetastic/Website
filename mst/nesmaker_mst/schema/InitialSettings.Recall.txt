@@ -1,0 +1,44 @@
+this.IsOverworld = R:Boolean()
+v0 = R:Int32()
+v1 = R:Int32()
+this.StartingScreen = new Point(v0,v1)
+v0 = R:Int32()
+v1 = R:Int32()
+this.StartingLocation = new Point(v0,v1)
+this.DefeatedBosses = R:Byte()
+this.RelicGroup1 = R:Byte()
+this.RelicGroup2 = R:Byte()
+v2 = ((FileVersion < 289) == 0)
+if !v2 goto L68478
+v3 = 0
+goto L6846d
+L68459:
+this.GameItems[v3] = R:Byte()
+v3 = (v3 + 1)
+L6846d:
+v4 = (v3 < 8)
+if v4 goto L68459
+L68478:
+v5 = ((FileVersion < 293) == 0)
+if !v5 goto L684da
+this.SongsLearned = R:Byte()
+v6 = R:Byte()
+this.TriggeredScreens = new tok10000e9[v6]
+v7 = 0
+goto L684cd
+L684b6:
+this.TriggeredScreens[v7] = R:Byte()
+v7 = (v7 + 1)
+L684cd:
+v8 = (v7 < v6)
+if v8 goto L684b6
+L684da:
+v9 = ((FileVersion < 305) == 0)
+if !v9 goto L684fe
+this.DayNightSpeed = R:Byte()
+L684fe:
+v10 = ((FileVersion < 336) == 0)
+if !v10 goto L68522
+this.SkipStartScreen = R:Boolean()
+L68522:
+return 

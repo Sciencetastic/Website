@@ -1,0 +1,6 @@
+this.TileSetID = R:Int32()
+this.UnderSlashTile = R:Byte()
+this.UnderStompTile = R:Byte()
+this.UnderSecretTile = R:Byte()
+this.BossBarrierTile = R:Byte()
+return 

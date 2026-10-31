@@ -1,0 +1,3 @@
+this.ID = R:Byte()
+this.Name = R:String()
+return 

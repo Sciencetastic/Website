@@ -1,0 +1,4 @@
+v0 = R:Int32()
+this.Shopitem = R:Bytes(v0)
+this.Price = R:Bytes(v0)
+return 

@@ -1,0 +1,14 @@
+v0 = 0
+goto L9bace
+L9bab9:
+this.PathInfos[v0].Recall(a1)
+v0 = (v0 + 1)
+L9bace:
+v1 = (v0 < 4)
+if v1 goto L9bab9
+v2 = ((FileVersion < 276) == 0)
+if !v2 goto L9bb05
+this.PathTransform = R:Byte()
+this.Name = R:String()
+L9bb05:
+return 

@@ -1,0 +1,8 @@
+this.Name = R:String()
+this.TheText = R:String()
+v0 = ((FileVersion < 290) == 0)
+if !v0 goto Lc846a
+this.EnderCode = R:String()
+this.EnderItem = R:Byte()
+Lc846a:
+return 

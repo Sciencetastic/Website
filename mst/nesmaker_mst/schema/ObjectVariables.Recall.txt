@@ -1,0 +1,33 @@
+v0 = (FileVersion < 343)
+if !v0 goto L6c4d0
+this.VarCount = R:Int32()
+v1 = R:Int32()
+this.UserRAMReservation.Clear()
+v2 = 0
+goto L6c4c5
+L6c49a:
+v3 = R:String()
+v4 = new UserDefinedVar()
+v4.Name = v3
+this.UserRAMReservation.Add(v4)
+v2 = (v2 + 1)
+L6c4c5:
+v5 = (v2 < v1)
+if v5 goto L6c49a
+L6c4d0:
+v6 = ((FileVersion < 343) == 0)
+if !v6 goto L6c533
+this.VarCount = R:Int32()
+v7 = R:Int32()
+v8 = 0
+goto L6c526
+L6c500:
+v9 = new UserDefinedVar()
+v9.Recall(a1)
+this.UserRAMReservation.Add(v9)
+v8 = (v8 + 1)
+L6c526:
+v10 = (v8 < v7)
+if v10 goto L6c500
+L6c533:
+return 

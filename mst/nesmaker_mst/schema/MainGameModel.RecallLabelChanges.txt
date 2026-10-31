@@ -1,0 +1,53 @@
+this.RecallTupleList(TileTypeList,a1)
+this.RecallTupleList(ChangeTileTypeList,a1)
+this.RecallTupleList(ShopNameList,a1)
+this.RecallTupleList(GameItemList,a1)
+this.RecallTupleList(RelicList,a1)
+this.RecallTupleList(MagicTypeList,a1)
+this.RecallTupleList(SongList,a1)
+this.RecallDictionary(MonsterSolidReaction,a1)
+this.RecallDictionary(MonsterEdgeReaction,a1)
+this.RecallDictionary(MonsterHurtReaction,a1)
+this.RecallDictionary(SpawnType,a1)
+this.RecallDictionary(AnimationType,a1)
+this.RecallDictionary(ActionType,a1)
+this.RecallDictionary(EndAction,a1)
+this.RecallDictionary(EndAnimation,a1)
+v0 = ((FileVersion < 310) == 0)
+if !v0 goto L6a012
+v1 = R:Int32()
+v2 = 0
+goto L6a007
+L69feb:
+v3 = new TileResouce()
+v3.Recall(a1)
+this.UpdateTileResource(v3)
+v2 = (v2 + 1)
+L6a007:
+v4 = (v2 < v1)
+if v4 goto L69feb
+L6a012:
+v5 = ((FileVersion < 320) == 0)
+if !v5 goto L6a043
+this.RecallDictionary(MonsterActionStepFlags,a1)
+this.RecallDictionary(MonsterFlags,a1)
+L6a043:
+v6 = ((FileVersion < 327) == 0)
+if !v6 goto L6a067
+this.RecallDictionary(ScreenFlags,a1)
+L6a067:
+v7 = ((FileVersion < 356) == 0)
+if !v7 goto L6a0a5
+this.RecallDictionary(ScreenBytes,a1)
+this.RecallDictionary(SpecialTileTypes1,a1)
+this.RecallDictionary(SpecialTileTypes2,a1)
+L6a0a5:
+v8 = ((FileVersion < 369) == 0)
+if !v8 goto L6a0c9
+this.RecallDictionary(GameStates,a1)
+L6a0c9:
+v9 = ((FileVersion < 374) == 0)
+if !v9 goto L6a0ed
+this.RecallDictionary(MonsterBits,a1)
+L6a0ed:
+return 

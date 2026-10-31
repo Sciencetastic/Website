@@ -1,0 +1,5 @@
+this.NoteID = R:Int32()
+this.NotePos = R:Int32()
+this.Length = R:Int32()
+this.Channel = R:Int32()
+return 

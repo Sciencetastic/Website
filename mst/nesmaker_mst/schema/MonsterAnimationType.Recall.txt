@@ -1,0 +1,18 @@
+this.MonsterAnimationGroup.Clear()
+this.Name = R:String()
+v0 = R:Int32()
+v1 = 0
+goto L75333
+L75311:
+v2 = R:Int32()
+v3 = R:String()
+this.MonsterAnimationGroup.Item[v2] = v3
+v1 = (v1 + 1)
+L75333:
+v4 = (v1 < v0)
+if v4 goto L75311
+v5 = ((FileVersion < 267) == 0)
+if !v5 goto L75361
+this.ID = R:Int32()
+L75361:
+return 

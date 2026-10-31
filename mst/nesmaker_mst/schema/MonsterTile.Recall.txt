@@ -1,0 +1,5 @@
+this.FlipH = R:Boolean()
+this.FlipV = R:Boolean()
+this.TileID = R:Byte()
+this.SubPaletteID = R:Byte()
+return 

@@ -1,0 +1,530 @@
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus("STR")
+v0 = R:Int32()
+FileVersion = R:Int32()
+v10 = ((v0 == -559038737) == 0)
+if !v10 goto L68e79
+goto L69ef9
+L68e79:
+v11 = (FileVersion < 258)
+if !v11 goto L68ea1
+goto L69ef9
+L68ea1:
+v1 = R:Int32()
+v2 = R:Int32()
+v3 = R:Int32()
+v4 = R:Int32()
+v5 = R:Int32()
+v6 = R:Int32()
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v1.ToString(),"STR"))
+this.Palettes = new R:TypeSpec()
+v12 = 0
+goto L68f86
+L68efe:
+v13 = new PaletteInfo()
+v14 = R:String()
+v13.Recall(a1)
+v15 = ((this.Palettes.Count < 128) == 0)
+if !v15 goto L68f34
+goto L68f80
+L68f34:
+this.Palettes.Add(v13)
+v16 = ((this.Palettes.Count < 64) == 0)
+if !v16 goto L68f5c
+goto L68f80
+L68f5c:
+RootNodes["STR"].Nodes[v12].Text = v14
+L68f80:
+v12 = (v12 + 1)
+L68f86:
+v17 = (v12 < v1)
+if v17 goto L68efe
+v7 = this.Palettes.Count
+v18 = (v7 < 128)
+if !v18 goto L68fe6
+v19 = (128 - v7)
+v20 = 0
+goto L68fd9
+L68fc0:
+this.Palettes.Add(new PaletteInfo())
+v20 = (v20 + 1)
+L68fd9:
+v21 = (v20 < v19)
+if v21 goto L68fc0
+L68fe6:
+v8 = a1.BaseStream.Position
+v9 = System.String::Format("STR",v8)
+new tok10000eb[5][0] = "STR"
+new tok10000eb[5][1] = v2.ToString()
+new tok10000eb[5][2] = "STR"
+new tok10000eb[5][3] = v9
+new tok10000eb[5][4] = "STR"
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat(new tok10000eb[5]))
+v22 = 0
+goto L69083
+L69043:
+v23 = R:Int32()
+v24..ctor(R:Bytes(v23))
+v25 = new ScreenInfo(0)
+v25.Recall(a1)
+this.Screens.Item[v24] = v25
+v22 = (v22 + 1)
+L69083:
+v26 = (v22 < v2)
+if v26 goto L69043
+v8 = a1.BaseStream.Position
+v9 = System.String::Format("STR",v8)
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v9,"STR"))
+v27 = 0
+goto L69110
+L690ca:
+v28 = R:Int32()
+v29 = R:Int32()
+v30 = R:Int32()
+v31..ctor(R:Bytes(v30))
+this.OverworldMap.Item[new Point(v28,v29)] = v31
+v27 = (v27 + 1)
+L69110:
+v32 = (v27 < v3)
+if v32 goto L690ca
+v8 = a1.BaseStream.Position
+v9 = System.String::Format("STR",v8)
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v9,"STR"))
+v33 = 0
+goto L6919d
+L69157:
+v34 = R:Int32()
+v35 = R:Int32()
+v36 = R:Int32()
+v37..ctor(R:Bytes(v36))
+this.UnderworldMap.Item[new Point(v34,v35)] = v37
+v33 = (v33 + 1)
+L6919d:
+v38 = (v33 < v4)
+if v38 goto L69157
+v8 = a1.BaseStream.Position
+v9 = System.String::Format("STR",v8)
+new tok10000eb[5][0] = "STR"
+new tok10000eb[5][1] = v5.ToString()
+new tok10000eb[5][2] = "STR"
+new tok10000eb[5][3] = v9
+new tok10000eb[5][4] = "STR"
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat(new tok10000eb[5]))
+v39 = 0
+goto L6927d
+L69206:
+v40 = R:Int32()
+v41..ctor(R:Bytes(v40))
+v42 = new GraphicAsset()
+v42.Recall(a1)
+v43 = (PoisonGraphicAssetNames.ContainsKey(v42.Name) == 0)
+if !v43 goto L69276
+v44 = (v42.Name.Contains("STR") == 0)
+if !v44 goto L69275
+this.TileAssets.Item[v41] = v42
+L69275:
+L69276:
+v39 = (v39 + 1)
+L6927d:
+v45 = (v39 < v5)
+if v45 goto L69206
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v6.ToString(),"STR"))
+v46 = 0
+goto L692ec
+L692ad:
+v47 = R:Int32()
+v48..ctor(R:Bytes(v47))
+v49 = new PathinfoGroup()
+v49.Recall(a1)
+this.PathInfos.Item[v48] = v49
+v46 = (v46 + 1)
+L692ec:
+v50 = (v46 < v6)
+if v50 goto L692ad
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus("STR")
+v51 = ((FileVersion < 261) == 0)
+if !v51 goto L69327
+this.Initialsettings.Recall(a1)
+L69327:
+v52 = ((FileVersion < 264) == 0)
+if !v52 goto L69439
+v53 = R:Int32()
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v53.ToString(),"STR"))
+v54 = 0
+goto L69429
+L6936c:
+v55 = new M:<>c__DisplayClass9_0()
+v56 = R:Int32()
+v57..ctor(R:Bytes(v56))
+v55.monster = new MonsterInfo()
+v55.monster.Recall(a1)
+?? ldftn M:<>c__DisplayClass9_0::<Recall>b__0
+v58 = R:System.Linq.Enumerable::Count(R:System.Linq.Enumerable::Where(?,new R:TypeSpec(this.Monsters,v55)))
+v59 = (v58 > 0)
+if !v59 goto L6940d
+if <>9__9_1 goto L693fb
+?? ldftn M:<>c::<Recall>b__9_1
+<>9__9_1 = new R:TypeSpec(this.Monsters,<>9)
+L693fb:
+?.ID = (System.Linq.Enumerable::Max(R:System.Linq.Enumerable::Select(v55.monster,new R:TypeSpec(this.Monsters,<>9))) + 1)
+L6940d:
+this.Monsters.Item[v57] = v55.monster
+v54 = (v54 + 1)
+L69429:
+v60 = (v54 < v53)
+if v60 goto L6936c
+L69439:
+v61 = ((FileVersion < 269) == 0)
+if !v61 goto L694d3
+this.MonsterGroups.Clear()
+v62 = R:Int32()
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v62.ToString(),"STR"))
+v63 = 0
+goto L694c6
+L69487:
+v64 = R:Int32()
+v65..ctor(R:Bytes(v64))
+v66 = new MonsterGroup()
+v66.Recall(a1)
+this.MonsterGroups.Item[v65] = v66
+v63 = (v63 + 1)
+L694c6:
+v67 = (v63 < v62)
+if v67 goto L69487
+L694d3:
+v68 = ((FileVersion < 274) == 0)
+if !v68 goto L6956e
+this.MonsterPalettes.Clear()
+v69 = R:Int32()
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v69.ToString(),"STR"))
+v70 = 0
+goto L69561
+L69521:
+v71 = new MonsterSubPalette()
+v71.Recall(a1)
+v72 = ((this.MonsterPalettes.Count < 64) == 0)
+if !v72 goto L6954c
+goto L6955b
+L6954c:
+this.MonsterPalettes.Add(v71)
+L6955b:
+v70 = (v70 + 1)
+L69561:
+v73 = (v70 < v69)
+if v73 goto L69521
+L6956e:
+v74 = ((FileVersion < 278) == 0)
+if !v74 goto L6967a
+this.AssetGroups.Clear()
+v75 = R:Int32()
+v77 = 0
+goto L69609
+L695a0:
+v78 = R:Int32()
+v79 = R:Int32()
+v80 = new R:TypeSpec()
+v81 = 0
+goto L695e6
+L695bd:
+v82 = R:Int32()
+v83..ctor(R:Bytes(v82))
+v80.Add(v83)
+v81 = (v81 + 1)
+L695e6:
+v84 = (v81 < v79)
+if v84 goto L695bd
+this.AssetGroups.Item[v78] = v80
+v77 = (v77 + 1)
+L69609:
+v85 = (v77 < v75)
+if v85 goto L695a0
+this.AssetGroupBag.Clear()
+v76 = R:Int32()
+v86 = 0
+goto L6966d
+L6962e:
+v87 = R:Int32()
+v88..ctor(R:Bytes(v87))
+v89 = new AssetGroup()
+v89.Recall(a1)
+this.AssetGroupBag.Item[v88] = v89
+v86 = (v86 + 1)
+L6966d:
+v90 = (v86 < v76)
+if v90 goto L6962e
+L6967a:
+v91 = ((FileVersion < 279) == 0)
+if !v91 goto L6969e
+this.Mapinfo.Recall(a1)
+L6969e:
+v92 = ((FileVersion < 280) == 0)
+if !v92 goto L696c2
+this.Textinfo.Recall(a1)
+L696c2:
+v93 = ((FileVersion < 289) == 0)
+if !v93 goto L696e6
+this.Shopinfos.Recall(a1)
+L696e6:
+v94 = ((FileVersion < 292) == 0)
+if !v94 goto L6970a
+this.TextGroupinfo.Recall(a1)
+L6970a:
+v95 = ((FileVersion < 294) == 0)
+if !v95 goto L6972e
+this.SpecialTilesGroup.Recall(a1)
+L6972e:
+v96 = ((FileVersion < 296) == 0)
+if !v96 goto L69752
+this.AnimationInfo.Recall(a1)
+L69752:
+v97 = ((FileVersion < 297) == 0)
+if !v97 goto L697b4
+this.SpecialScreenPalettes = new R:TypeSpec()
+v98 = R:Int32()
+v99 = 0
+goto L697a7
+L69781:
+v100 = new PaletteInfo()
+v100.Recall(a1)
+this.SpecialScreenPalettes.Add(v100)
+v99 = (v99 + 1)
+L697a7:
+v101 = (v99 < v98)
+if v101 goto L69781
+L697b4:
+v102 = ((FileVersion < 304) == 0)
+if !v102 goto L69816
+this.SpecialScreenAssets = new R:TypeSpec()
+v103 = R:Int32()
+v104 = 0
+goto L69809
+L697e3:
+v105 = new GraphicAsset()
+v105.Recall(a1)
+this.SpecialScreenAssets.Add(v105)
+v104 = (v104 + 1)
+L69809:
+v106 = (v104 < v103)
+if v106 goto L697e3
+L69816:
+v107 = ((FileVersion < 306) == 0)
+if !v107 goto L69878
+this.GameObjects = new R:TypeSpec()
+v108 = R:Int32()
+v109 = 0
+goto L6986b
+L69845:
+v110 = new MonsterInfo()
+v110.Recall(a1)
+this.GameObjects.Add(v110)
+v109 = (v109 + 1)
+L6986b:
+v111 = (v109 < v108)
+if v111 goto L69845
+L69878:
+v112 = ((FileVersion < 307) == 0)
+if !v112 goto L6989c
+this.GameItemOffsets.Recall(a1)
+L6989c:
+v113 = ((FileVersion < 309) == 0)
+if !v113 goto L6994c
+this.Scripts.Clear()
+v114 = R:Int32()
+v115 = 0
+goto L698ec
+L698ce:
+v116 = R:String()
+this.Scripts.Add(v116)
+v115 = (v115 + 1)
+L698ec:
+v117 = (v115 < v114)
+if v117 goto L698ce
+this.Inputs.Clear()
+v114 = R:Int32()
+v118 = 0
+goto L69937
+L69911:
+v119 = new ControlInput()
+v119.Recall(a1)
+this.Inputs.Add(v119)
+v118 = (v118 + 1)
+L69937:
+v120 = (v118 < v114)
+if v120 goto L69911
+this.RecallLabelChanges(a1)
+L6994c:
+v121 = ((FileVersion < 311) == 0)
+if !v121 goto L6998a
+this.Emulator = R:String()
+this.EmulatorParams = R:String()
+this.EmulatorWorkingDir = R:String()
+L6998a:
+v122 = ((FileVersion < 312) == 0)
+if !v122 goto L699e4
+this.SpecialScreenMusic.Clear()
+v123 = R:Int32()
+v124 = 0
+goto L699d7
+L699b9:
+v125 = R:Byte()
+this.SpecialScreenMusic.Add(v125)
+v124 = (v124 + 1)
+L699d7:
+v126 = (v124 < v123)
+if v126 goto L699b9
+L699e4:
+v127 = ((FileVersion < 322) == 0)
+if !v127 goto L69a08
+this.HudInfo.Recall(a1)
+L69a08:
+v128 = ((FileVersion < 324) == 0)
+if !v128 goto L69a53
+this.ScrPhysics = R:String()
+this.ScrTileCol = R:String()
+this.ScrHandleBounds = R:String()
+this.ScrHandleSpriteDrawing = R:String()
+L69a53:
+v129 = ((FileVersion < 326) == 0)
+if !v129 goto L69aad
+this.GlobalUserVars.Clear()
+v130 = R:Int32()
+v131 = 0
+goto L69aa0
+L69a82:
+v132 = R:String()
+this.GlobalUserVars.Add(v132)
+v131 = (v131 + 1)
+L69aa0:
+v133 = (v131 < v130)
+if v133 goto L69a82
+L69aad:
+v134 = ((FileVersion < 327) == 0)
+if !v134 goto L69b1c
+this.AllScriptDefines.Clear()
+v135 = R:Int32()
+v136 = 0
+goto L69b02
+L69adc:
+v137 = new ScriptDefine()
+v137.Recall(a1)
+this.AllScriptDefines.Add(v137)
+v136 = (v136 + 1)
+L69b02:
+v138 = (v136 < v135)
+if v138 goto L69adc
+this.AllSoundAsm = R:String()
+L69b1c:
+v139 = ((FileVersion < 328) == 0)
+if !v139 goto L69b76
+this.GlobalUserVarInitialValues.Clear()
+v140 = R:Int32()
+v141 = 0
+goto L69b69
+L69b4b:
+v142 = R:Int32()
+this.GlobalUserVarInitialValues.Add(v142)
+v141 = (v141 + 1)
+L69b69:
+v143 = (v141 < v140)
+if v143 goto L69b4b
+L69b76:
+v144 = ((FileVersion < 336) == 0)
+if !v144 goto L69b9a
+this.GameObjectTileset = R:String()
+L69b9a:
+v145 = ((FileVersion < 337) == 0)
+if !v145 goto L69bbe
+this.HUDTileset = R:String()
+L69bbe:
+v146 = ((FileVersion < 338) == 0)
+if !v146 goto L69c6e
+this.SFXLinks.Clear()
+v147 = R:Int32()
+v148 = 0
+goto L69c16
+L69bf0:
+v149 = new SFXLink()
+v149.Recall(a1)
+this.SFXLinks.Add(v149)
+v148 = (v148 + 1)
+L69c16:
+v150 = (v148 < v147)
+if v150 goto L69bf0
+this.UserDefinedVars.Clear()
+v147 = R:Int32()
+v151 = 0
+goto L69c61
+L69c3b:
+v152 = new UserDefinedVar()
+v152.Recall(a1)
+this.UserDefinedVars.Add(v152)
+v151 = (v151 + 1)
+L69c61:
+v153 = (v151 < v147)
+if v153 goto L69c3b
+L69c6e:
+v154 = ((FileVersion < 338) == 0)
+if !v154 goto L69cc6
+this.SpriteZeroCheck = R:Boolean()
+this.SpriteZeroIndex = R:Byte()
+this.SpriteZeroHBlank = R:Byte()
+this.SpriteZeroX = R:Byte()
+this.SpriteZeroY = R:Byte()
+L69cc6:
+v155 = ((FileVersion < 341) == 0)
+if !v155 goto L69ce5
+this.RecallPluginData(a1)
+L69ce5:
+v156 = ((FileVersion < 342) == 0)
+if !v156 goto L69d23
+this.MyObjectVariables.Recall(a1)
+this.UserRAMDefine_ZeroPage.Recall(a1)
+this.UserRAMDefine_Overflow.Recall(a1)
+L69d23:
+v157 = ((FileVersion < 344) == 0)
+if !v157 goto L69d47
+this.UserDefinedConstants.Recall(a1)
+L69d47:
+v158 = ((FileVersion < 345) == 0)
+if !v158 goto L69e17
+this.ExportTitle = R:String()
+this.ExportStudio = R:String()
+this.ExportYear = R:String()
+this.ExportNarrative = R:String()
+this.ExportPixelArt = R:String()
+this.ExportSound = R:String()
+this.ExportProgramming = R:String()
+this.ExportNotes = R:String()
+this.ExportInstructionManual = R:String()
+this.ExportSoundtrackFolder = R:String()
+this.ExportScreenshotFolder = R:String()
+this.ExportArtworkFolder = R:String()
+this.ExportCoverImage = R:String()
+this.ExportROMFileName = R:String()
+L69e17:
+v159 = ((FileVersion < 355) == 0)
+if !v159 goto L69e3b
+this.NESMusic.Recall(a1)
+L69e3b:
+v160 = ((FileVersion < 358) == 0)
+if !v160 goto L69ed5
+v161 = R:Int32()
+MysticSearchesTool.MysticSearchToolMainDialog::ReportLoadStatus(System.String::Concat("STR",v161.ToString(),"STR"))
+this.GameObjectActors.Clear()
+v162 = 0
+goto L69ec8
+L69e89:
+v163 = R:Int32()
+v164..ctor(R:Bytes(v163))
+v165 = new ObjectManagerActor()
+v165.Recall(a1)
+this.GameObjectActors.Item[v164] = v165
+v162 = (v162 + 1)
+L69ec8:
+v166 = (v162 < v161)
+if v166 goto L69e89
+L69ed5:
+v167 = ((FileVersion < 361) == 0)
+if !v167 goto L69ef9
+this.Mapdetails.Recall(a1)
+L69ef9:
+return 

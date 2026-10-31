@@ -1,0 +1,3 @@
+this.Name = R:String()
+this.Value = R:Int32()
+return 

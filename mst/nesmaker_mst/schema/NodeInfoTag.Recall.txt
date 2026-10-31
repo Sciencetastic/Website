@@ -1,0 +1,5 @@
+this.Type = R:Int32()
+this.Ident = R:Int32()
+v0 = R:Int32()
+this.GuidID = new Guid(R:Bytes(v0))
+return 

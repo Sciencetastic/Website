@@ -1,0 +1,12 @@
+v0 = R:Int32()
+this.ID = new Guid(R:Bytes(v0))
+this.Name = R:String()
+v0 = R:Int32()
+this.Square1 = new Guid(R:Bytes(v0))
+v0 = R:Int32()
+this.Square2 = new Guid(R:Bytes(v0))
+v0 = R:Int32()
+this.Triangle = new Guid(R:Bytes(v0))
+v0 = R:Int32()
+this.Noise = new Guid(R:Bytes(v0))
+return 

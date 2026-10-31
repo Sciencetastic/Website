@@ -1,0 +1,15 @@
+v0 = this.AllPalettes.GetEnumerator()
+goto L99652
+L99624:
+v1 = v0.Current
+v1[0] = R:Int32()
+v1[1] = R:Int32()
+v1[2] = R:Int32()
+v1[3] = R:Int32()
+L99652:
+if v0.MoveNext() goto L99624
+goto L9966c
+v0.Dispose()
+L9966c:
+this.RefreshIcon()
+return 

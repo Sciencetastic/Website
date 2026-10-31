@@ -1,0 +1,19 @@
+v0 = R:Int32()
+this.ID = new Guid(R:Bytes(v0))
+this.Name = R:String()
+this.Width = R:Int32()
+this.Height = R:Int32()
+this.TileIDs.Clear()
+v1 = R:Int32()
+v2 = 0
+goto L2288c
+L22859:
+v3 = R:Int32()
+v4 = R:Int32()
+v5 = R:Int32()
+this.TileIDs.Item[new Point(v3,v4)] = v5
+v2 = (v2 + 1)
+L2288c:
+v6 = (v2 < v1)
+if v6 goto L22859
+return 

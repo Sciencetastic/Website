@@ -1,0 +1,12 @@
+this.TilesetID = R:Int32()
+v0 = R:Int32()
+this.TileAnimationBytes = new tok10000e9[v0]
+v1 = 0
+goto L9f45
+L9f31:
+this.TileAnimationBytes[v1] = R:Byte()
+v1 = (v1 + 1)
+L9f45:
+v2 = (v1 < v0)
+if v2 goto L9f31
+return 

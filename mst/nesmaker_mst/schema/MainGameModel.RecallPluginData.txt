@@ -1,0 +1,40 @@
+v0 = MyPlugins.Count
+v1 = R:Int32()
+v2 = 0
+goto L6b549
+L6b492:
+v3 = R:String()
+v4 = R:Int32()
+v6 = (v4 == 0)
+if !v6 goto L6b4b2
+goto L6b545
+L6b4b2:
+v5 = R:Bytes(v4)
+v7 = (None.Singleton.Plugins > null)
+if !v7 goto L6b544
+v8 = None.Singleton.Plugins.GetEnumerator()
+goto L6b52b
+L6b4e4:
+v9 = v8.Current
+v10 = System.String::op_Equality(v9.Metadata.ID,v3)
+if !v10 goto L6b52a
+v11 = new MemoryStream(v5)
+v12 = new BinaryReader(v11)
+v9.Value.Recall(v12)
+goto L6b534
+L6b52a:
+L6b52b:
+if v8.MoveNext() goto L6b4e4
+L6b534:
+goto L6b543
+if !v8 goto L6b542
+v8.Dispose()
+L6b542:
+L6b543:
+L6b544:
+L6b545:
+v2 = (v2 + 1)
+L6b549:
+v13 = (v2 < v1)
+if v13 goto L6b492
+return 
