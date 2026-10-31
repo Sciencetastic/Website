@@ -22,9 +22,9 @@ REM set "M_PLANNER=openai/gpt-6.1-terra:floor"
 REM set "M_PLANNER_FALLBACK=moonshotai/kimi-k2.6"
 REM ------------------------------------------------------------------------------------------------
 
-where hermes >nul 2>nul
+call hermes --version >nul 2>nul
 if errorlevel 1 (
-  echo Hermes was not found on PATH. Install Hermes Agent first, then run this again.
+  echo Could not run "hermes" from this Command Prompt. Install Hermes Agent or fix PATH, then run this again.
   pause
   exit /b 1
 )

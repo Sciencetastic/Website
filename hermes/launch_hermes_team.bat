@@ -3,9 +3,9 @@ REM Starts the Kimi planner, which delegates to the coder / auditor / designer p
 REM Hermes uses the current folder as its working directory, so we start in the project root.
 cd /d "%~dp0.."
 
-where hermes >nul 2>nul
+call hermes --version >nul 2>nul
 if errorlevel 1 (
-  echo Hermes was not found on PATH.
+  echo Could not run "hermes" from this Command Prompt. Install Hermes Agent or fix PATH, then run this again.
   pause
   exit /b 1
 )
