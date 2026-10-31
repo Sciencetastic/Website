@@ -146,6 +146,42 @@ Whether the editor regenerates stale previews on load is **NOT TESTED**. Reprodu
 (≤ 3 free colors per 16×16 block; all four backdrops should match). A screen uses `Palettes[screen.PaletteID]`.
 The API: `p.palettes[i].set_color(sub, slot, nes_index)`, `.set_colors([16 ints])`, `.name = "…"`.
 
+### 4.2b Sprite palettes vs. background palettes  (VERIFIED tables; INFERRED selection rules)
+
+The engine has **two completely separate palette tables**. Do not mix them up — they have different shapes:
+
+| | Background palettes | Sprite (object/monster) palettes |
+|---|---|---|
+| Table in the `.MST` | `Palettes` (128 records) | `MonsterPalettes` = `MonsterSubPalette` records (**64**) |
+| API | `p.palettes[i]` | `p.sprite_palettes[i]` |
+| Record shape | name + **16** colors = **4 sub-palettes x 4** | `ID`, name + **4** colors = **one** sub-palette |
+| Edit call | `set_color(sub, slot, nes)` | `set_color(slot, nes)` |
+| Chosen by | the screen: `ScreenInfo.PaletteID`; each 16x16 cell picks sub-palette 0-3 via `SubPaletteData` | the object: `MonsterInfo.DesiredPalette1ID…4ID`; the screen: `ObjectPaletteDay1ID…Day4ID`, `…Night1-4ID`, `…TriggeredDay/Night1-4ID` |
+| Exported by the editor as | `ScreenData/PaletteInfo.pal` (`BckPalNN:`) | `ScreenData/ObjectPals.pal` (`objectPal_N:`) |
+| Slot 0 means | shared backdrop (all four = same color, usually `0x0F`) | transparent (shows what is behind the sprite) |
+
+* **VERIFIED:** for all 64 entries, `objectPal_N` in the editor's `ObjectPals.pal` export equals `p.sprite_palettes[N].colors`
+  (e.g. `objectPal_0` = `$0f,$25,$30,$08` = "PlayerPal0" `[15,37,48,8]`). Editing a sprite palette therefore edits what the engine exports.
+* **Colors** are NES master-palette indices 0-63, exactly like background colors.
+* **Which sprites use which palette (INFERRED):** an object (`p.monsters()`; includes the Player, pickups, effects) lists up to four wanted
+  sprite-palette indices in `DesiredPalette1ID…4ID` (indices into the 64-entry table). Each screen lists, for day / night / triggered state,
+  four sprite-palette indices (`ObjectPalette…1ID…4ID`) — these appear to be the four hardware sprite palettes loaded while that screen is shown
+  (in the sample, screen 1 loads sprite palette 5 "CowsorPalette" in all four slots and the object `cowsor` asks for palette 5; screen 3 loads 2,2,3,3 = the intro monster palettes).
+  The exact slot-to-hardware mapping was **not** confirmed in the editor.
+* `p.sprite_palette_users(i)` lists the objects that reference palette `i` — check it before changing a shared palette (e.g. the Player's palette
+  is also used by pickups/effects).
+* **Sprite art** is stored like tiles: sheets with `TileType` `Monster`, `objectTiles`, `HudTiles` (see §4.3). Their pixels are *index colors*;
+  the sprite palette recolors them. So: **recolor a sprite = edit its sprite palette**; **redraw a sprite = replace its sheet** (and keep the sheet within 4 index colors).
+  Never edit a background palette to recolor a sprite or vice-versa.
+
+```python
+cow = p.sprite_palettes[5]                 # 'CowsorPalette'
+cow.set_colors([0x0F, 0x16, 0x27, 0x30])   # slot0 transparent/black, then 3 colors
+print(p.sprite_palette_users(5))           # -> [('cowsor', [1])]  who will change colour
+p.monsters()[1]["DesiredPalette1ID"] = 6   # point an object at a different sprite palette
+p.save("Projects/Game_edit.MST")
+```
+
 ### 4.3 Art (graphic assets)  (VERIFIED for read + swap; NOT TESTED in the editor)
 
 * 78 `GraphicAsset` records per project, each with an **embedded BMP**, paired **by order** with 78 `TileResouce`

@@ -251,6 +251,23 @@ class MSTProject:
             prev = x
         return out
 
+    # =================================================================== sprite (object) palettes
+    @property
+    def sprite_palettes(self):
+        """The 64 *sprite* palettes (MonsterSubPalette): one sub-palette each = 4 NES colours.
+        Separate from the background palettes in `palettes` (which hold 4 sub-palettes each)."""
+        return [SpritePalette(self, n) for n in kids(self.root, 'MonsterSubPalette')]
+
+    def sprite_palette_users(self, index):
+        """Names of objects/monsters whose DesiredPalette1-4ID slot points at sprite palette `index`."""
+        out = []
+        for m in self.monsters():
+            f = m.fields()
+            slots = [i for i in range(1, 5) if f.get('DesiredPalette%dID' % i) == index]
+            if slots:
+                out.append((f.get('Name'), slots))
+        return out
+
     # =================================================================== screens
     @property
     def screens(self):
@@ -435,6 +452,48 @@ class Palette:
 
     def __repr__(self):
         return f'<Palette {self.index} {self.name!r} {self.colors}>'
+
+
+class SpritePalette:
+    """One sprite palette: 4 NES colour indices. Slot 0 is the transparent/backdrop slot (0x0F in the samples)."""
+
+    def __init__(self, proj, node):
+        self.proj, self.node = proj, node
+
+    @property
+    def index(self):
+        return field(self.node, 'ID').val
+
+    @property
+    def name(self):
+        return field(self.node, 'Name').val
+
+    @name.setter
+    def name(self, v):
+        self.proj.set_leaf(field(self.node, 'Name'), v)
+
+    def _colors(self):
+        return array(self.node, 'colors')
+
+    @property
+    def colors(self):
+        return [l.val for l in self._colors()]
+
+    def set_color(self, slot, nes_index):
+        if not 0 <= slot < 4:
+            raise IndexError('slot 0..3')
+        if not 0 <= nes_index < NES_COLOR_COUNT:
+            raise ValueError('NES colour index must be 0..63')
+        self.proj.set_leaf(self._colors()[slot], int(nes_index))
+
+    def set_colors(self, colors):
+        if len(colors) != 4:
+            raise ValueError('need 4 colours')
+        for i, c in enumerate(colors):
+            self.set_color(i, c)
+
+    def __repr__(self):
+        return f'<SpritePalette {self.index} {self.name!r} {self.colors}>'
 
 
 class Screen:

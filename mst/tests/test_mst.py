@@ -81,6 +81,15 @@ class Edits(unittest.TestCase):
             self.assertIn('hl_test', [v.name for v in q.ram_sections()['zeropage'].vars()])
             self.assertTrue(q.verify_roundtrip())
 
+    def test_sprite_palettes(self):
+        p = MSTProject(self.data)
+        self.assertEqual(len(p.sprite_palettes), 64)
+        self.assertEqual(p.sprite_palettes[0].colors, [15, 37, 48, 8])       # == ObjectPals.pal objectPal_0
+        p.sprite_palettes[5].set_colors([15, 22, 39, 48])
+        q = MSTProject(p.to_bytes())
+        self.assertEqual(q.sprite_palettes[5].colors, [15, 22, 39, 48])
+        self.assertEqual(q.palettes[3].colors, MSTProject(self.data).palettes[3].colors)   # bg table untouched
+
     def test_clone_place_delete_screen(self):
         p = MSTProject(self.data)
         n = len(p.screens)
