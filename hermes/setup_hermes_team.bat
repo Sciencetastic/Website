@@ -6,7 +6,7 @@ setlocal
 cd /d "%~dp0"
 
 REM ---- EDIT THESE: OpenRouter model IDs (check exact slugs at https://openrouter.ai/models) ----
-set "M_PLANNER=moonshotai/kimi-k3"
+set "M_PLANNER=moonshotai/kimi-k2.6"
 set "M_CODER=qwen/qwen3.8-flash"
 set "M_AUDITOR=z-ai/glm-5.3-flash"
 set "M_DESIGNER=google/gemini-3.7-flash"
