@@ -1,0 +1,133 @@
+/* Portfolio — clean, recruiter-friendly. Indie mode warms the accent. */
+:root {
+  --bg: #fbfaf7; --fg: #14213d; --muted: #4f5a6e; --surface: #ffffff; --border: #dfe2e8;
+  --accent: #1d4ed8; --accent-fg: #ffffff; --gold: #fca311;
+  --font-display: var(--font-sans);
+}
+body[data-mode="indie"] { --accent: #7c3aed; }
+body[data-mode="academic"] { --accent: #0f766e; }
+
+.modes { display: flex; flex-direction: column; }
+
+.hero { padding: var(--s-8) 0 var(--s-7); background:
+  radial-gradient(60rem 30rem at 85% -10%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+  linear-gradient(180deg, #fff, var(--bg)); border-bottom: 1px solid var(--border); }
+.hero h1 { font-size: var(--t-3xl); letter-spacing: -.02em; margin-bottom: var(--s-2); }
+.hero-sub { font-size: var(--t-lg); font-weight: 600; color: var(--accent); margin-bottom: var(--s-4); }
+
+.mode-switch { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); margin-top: var(--s-5);
+  padding: var(--s-2); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; width: fit-content; max-width: 100%; }
+@media (max-width: 600px) { .mode-switch { border-radius: var(--radius); } }
+.mode-label { font-weight: 600; font-size: var(--t-sm); padding: 0 var(--s-2); color: var(--muted); }
+.mode-btn { font: 600 var(--t-sm)/1 var(--font-body); padding: .65em 1em; border-radius: 999px; border: 1px solid transparent; background: transparent; color: var(--fg); cursor: pointer; }
+.mode-btn:hover { border-color: var(--border); }
+.mode-btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+.mode-note { margin-top: var(--s-2); }
+
+.about p { max-width: 46rem; }
+
+.results-band { background: var(--fg); color: #fff; }
+.results-band h2 { color: #fff; }
+.results-band .muted { color: #c8cfdc; }
+.stat { border-left: 3px solid var(--gold); padding-left: var(--s-4); }
+.stat-num { display: block; font: 800 var(--t-2xl)/1 var(--font-display); color: var(--gold); margin-bottom: var(--s-2); }
+.stat-label { color: #e6e9ef; font-size: var(--t-sm); }
+
+/* timeline */
+.timeline { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; border-left: 2px solid var(--border); }
+.job { position: relative; display: grid; gap: var(--s-1) var(--s-5); padding: var(--s-4) 0 var(--s-4) var(--s-5); }
+@media (min-width: 760px) { .job { grid-template-columns: 9.5rem 1fr; } }
+.job::before { content: ""; position: absolute; left: -7px; top: 1.45rem; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.job-when { font: 600 var(--t-sm)/1.4 var(--font-mono); color: var(--muted); padding-top: .2rem; }
+.job h3 { font-size: var(--t-md); margin-bottom: var(--s-1); }
+.job .org { font-weight: 400; color: var(--muted); }
+.job p { margin: 0; }
+.job.is-secondary { opacity: .72; }
+.job.is-secondary::before { background: var(--border); }
+.job.is-secondary h3 { font-size: var(--t-base); }
+.job.is-secondary .job-body p { font-size: var(--t-sm); }
+.job.is-first-secondary { margin-top: var(--s-5); border-top: 1px dashed var(--border); padding-top: var(--s-6); }
+.job.is-first-secondary::after { content: "Other experience"; position: absolute; top: .5rem; left: var(--s-5); font: 600 .75rem var(--font-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+
+/* indie */
+.indie-band { background: #f3f0fa; }
+.games .game { display: flex; flex-direction: column; gap: var(--s-3); }
+.games .game img { border-radius: var(--radius-sm); width: 100%; aspect-ratio: 460 / 215; object-fit: cover; }
+.game h3 { margin: var(--s-2) 0 0; }
+.game p { margin: 0; }
+.game .links { margin-top: auto; padding-top: var(--s-2); font-weight: 600; }
+.awards { margin: 0; padding-left: 1.1rem; font-size: var(--t-sm); }
+.art-kobold { aspect-ratio: 460 / 215; border-radius: var(--radius-sm); display: grid; place-items: center; text-align: center;
+  background: repeating-linear-gradient(45deg, #2d6a4f 0 12px, #40916c 12px 24px); color: #fff8dc;
+  font: 900 1.6rem/1.05 var(--font-mono); text-transform: uppercase; letter-spacing: .08em; text-shadow: 3px 3px 0 #1b4332; }
+.subhead { margin-top: var(--s-7); }
+.promo-link { display: flex; flex-direction: column; gap: var(--s-2); text-decoration: none; color: #fff; border: 0; transition: transform .15s; }
+.promo-link:hover { transform: translateY(-2px); text-decoration: none; }
+.promo-link strong { font-size: var(--t-lg); font-family: var(--font-serif); }
+.promo-link .eyebrow { color: inherit; opacity: .85; margin: 0; }
+.promo-dp { background: linear-gradient(135deg, #3b0a0a, #120606); }
+.promo-tarot { background: linear-gradient(135deg, #1e1035, #0b0618); }
+
+.note-box { background: #fff7e6; border: 1px solid #f2d39b; border-radius: var(--radius-sm); padding: var(--s-3) var(--s-4); font-size: var(--t-sm); }
+
+/* credentials */
+.creds .cred h4 { margin: var(--s-3) 0 var(--s-1); font-size: var(--t-md); }
+.creds .cred p { margin: 0; color: var(--muted); font-size: var(--t-sm); }
+.creds .badge { color: var(--accent); }
+.status-progress { color: #b45309 !important; }
+.coursework { margin-top: var(--s-4); }
+[data-only-mode] { display: none; }
+body[data-mode="academic"] [data-only-mode="academic"], body[data-mode="all"] [data-only-mode="academic"] { display: block; }
+
+/* skills */
+.chips { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4); }
+.chip { font: 600 var(--t-sm)/1 var(--font-body); padding: .6em 1em; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--fg); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--fg); color: #fff; border-color: var(--fg); }
+.skills { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.skills li { padding: .45em .85em; border-radius: var(--radius-sm); background: var(--surface); border: 1px solid var(--border); font-size: var(--t-sm); }
+.skills li[hidden] { display: none; }
+
+.press { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-3); }
+.press a { font-weight: 600; }
+
+.contact-band { background: #eef2fb; }
+
+/* ---------- PRINT: clean résumé ---------- */
+@media print {
+  @page { margin: 14mm; }
+  body { background: #fff !important; color: #000; font-size: 10.5pt; }
+  .site-header, .mode-switch, .mode-note, .btn-row, .video, .games img, .art-kobold, .chips,
+  .promo-link, .subhead + .grid--2, #indie .subhead, #contact, #press, .site-footer, .skip-link, .tbd, .coursework, #work-note { display: none !important; }
+  .hero, .results-band, .indie-band, .contact-band { background: none !important; color: #000; border: 0; padding: 0 0 8pt; }
+  .results-band h2, .stat-label, .stat-num { color: #000 !important; }
+  .results-band .muted { display: none; }
+  .section, .section--tight { padding: 6pt 0 !important; }
+  .modes { display: block; }
+  .hero h1 { font-size: 22pt; margin: 0; }
+  .hero-sub { color: #000; font-size: 11pt; }
+  .hero::after { content: "linkedin.com/in/williamamcdonald"; display: block; font-size: 9.5pt; }
+  h2 { font-size: 13pt; border-bottom: 1px solid #000; padding-bottom: 2pt; margin: 8pt 0 4pt; }
+  .card { border: 0; padding: 0; background: none; }
+  .grid { display: block; }
+  .stat { border: 0; padding: 0; display: inline; }
+  .stat-num { display: inline; font-size: 10.5pt; }
+  .stat::after { content: " · "; }
+  .timeline { border: 0; }
+  .job { display: block; padding: 3pt 0; opacity: 1 !important; break-inside: avoid; }
+  .job::before, .job::after { display: none !important; }
+  .job.is-first-secondary { margin: 0; border: 0; padding-top: 3pt; }
+  .job-when { float: right; font-size: 9pt; }
+  .job h3, .job.is-secondary h3 { font-size: 10.5pt; }
+  .job .job-body p { font-size: 9.5pt !important; }
+  .game, .creds .cred { display: block; margin-bottom: 3pt; break-inside: avoid; }
+  .creds .cred h4 { display: inline; font-size: 10pt; margin: 0; }
+  .creds .cred p { display: inline; }
+  .creds .cred p::before { content: " — "; }
+  .creds .badge { border: 0; padding: 0; float: right; font-size: 8pt; }
+  .skills li { border: 0; padding: 0; }
+  .skills li:not(:last-child)::after { content: ","; }
+  .skills li[hidden] { display: inline !important; }
+  .note-box { border: 0; padding: 0; background: none; }
+  a { color: #000; text-decoration: none; }
+  .game .links, #writing a { display: none; }
+}
