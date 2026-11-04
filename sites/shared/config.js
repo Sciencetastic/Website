@@ -23,7 +23,7 @@ window.SITE_FORMS = {
     "portfolio-contact": "",
     "prologue-cartridge-notify": "",
     "dinner-party-beta": "",
-    "tarot-interest": ""
+    "spirit-glass-interest": ""
   },
 
   // Fallback address, split so it is not sitting in page HTML for scrapers.

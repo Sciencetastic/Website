@@ -10,7 +10,7 @@ This repo holds two things:
 | Portfolio | `sites/portfolio/` | Morphable résumé: All / Corporate PM / Indie Game / Academic views (`?mode=pm`, `?mode=indie`, `?mode=academic`), one-click print-to-PDF résumé, contact form |
 | From Beyond: Prologue — cartridges | `sites/prologue-cartridges/` | Kickstarter notify list for the Nintendo / Genesis / Game Boy-GBC ports |
 | From Beyond: The Dinner Party | `sites/dinner-party/` | Sequel teaser + beta/demo sign-up |
-| Spirit Board: The Séance (working title) | `sites/tarot-reader/` | Electronic tarot board game prototype + interest list |
+| Spirit Glass — A Tarot Game | `sites/tarot-reader/` | Tarot game prototype (RFID cards + phone-powered crystal ball) + interest list |
 | Shared | `sites/shared/` | `base.css` (design tokens + components), `site.js` (forms, video), `config.js` (form settings), `img/` |
 
 Plain HTML/CSS/JS. **No build step, no dependencies, no database.**
@@ -33,7 +33,7 @@ Then open http://localhost:8000/portfolio/
 ### Option A — Netlify (recommended: forms work with zero code changes)
 1. Sign in at https://app.netlify.com with your GitHub account (free, no card).
 2. **Add new site → Import an existing project → GitHub → Sciencetastic/Website.** Branch: the one this PR merges into. `netlify.toml` already sets publish folder `sites`, no build command. Click **Deploy**.
-3. **Site configuration → Forms → Enable form detection**, then **Deploys → Trigger deploy → Deploy site** once. Four forms appear: `portfolio-contact`, `prologue-cartridge-notify`, `dinner-party-beta`, `tarot-interest`.
+3. **Site configuration → Forms → Enable form detection**, then **Deploys → Trigger deploy → Deploy site** once. Four forms appear: `portfolio-contact`, `prologue-cartridge-notify`, `dinner-party-beta`, `spirit-glass-interest`.
 4. **Forms → Form notifications → Add notification → Email notification** → event *New form submission*, form *Any form*, email **w.arthur.mcdonald@gmail.com**. The email subject names the form, so the four lists stay separate.
 5. Send **one** test per form (4 total) and confirm each arrives.
 6. Replace `https://YOUR-SITE.netlify.app` in `sites/sitemap.xml` and `sites/robots.txt` with your real URL.
@@ -51,7 +51,7 @@ The workflow `.github/workflows/pages.yml` checks every internal link and deploy
 If you later put a custom domain on Netlify, set `NETLIFY_CUSTOM_DOMAIN: true` in `sites/shared/config.js`.
 
 ### Fallback (what happens before a form service is connected)
-Submitting opens the visitor's email app with a pre-filled message to the project inbox and the list name in the subject (e.g. `[tarot-interest] sign-up from website`). It works, but relies on the visitor pressing Send — so connect Netlify or Formspree before promoting the sites.
+Submitting opens the visitor's email app with a pre-filled message to the project inbox and the list name in the subject (e.g. `[spirit-glass-interest] sign-up from website`). It works, but relies on the visitor pressing Send — so connect Netlify or Formspree before promoting the sites.
 
 ## Export subscriber lists (Netlify)
 1. Netlify dashboard → your site → **Forms**.

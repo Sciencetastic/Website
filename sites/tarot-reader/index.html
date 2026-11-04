@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spirit Board: The Séance — a Halloween party fortune-teller (prototype)</title>
-<meta name="description" content="Spirit Board: The Séance (working title) is an electronic tarot-reading board game in development: RFID tarot cards, a phone-powered crystal ball and spirit avatars. Prototype only — join the interest list.">
+<title>Spirit Glass — A Tarot Game (prototype)</title>
+<meta name="description" content="Spirit Glass is a tarot game in development: lay an RFID tarot card on the board and a spirit appears in the crystal ball to read it, powered by your phone. Prototype only — join the interest list.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Spirit Board: The Séance — a Halloween party fortune-teller, powered by your phone">
-<meta property="og:description" content="RFID tarot cards, a Pepper's Ghost crystal ball and spirit avatars voiced by an on-device AI. Prototype in development.">
+<meta property="og:title" content="Spirit Glass — a Halloween party fortune-teller, powered by your phone">
+<meta property="og:description" content="Ask a question, place a tarot card, and a spirit appears in the crystal ball to read it. Prototype in development.">
 <meta name="theme-color" content="#0b0618">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0618'/%3E%3Ccircle cx='16' cy='14' r='9' fill='%237b5cd6'/%3E%3Crect x='9' y='24' width='14' height='4' fill='%23d4af37'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../shared/base.css">
@@ -18,7 +18,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="./">Spirit Board</a>
+    <a class="brand" href="./">Spirit Glass</a>
     <nav class="site-nav" aria-label="Sections">
       <a href="#how">How it works</a>
       <a href="#spirits" class="nav-optional">Spirits</a>
@@ -41,8 +41,9 @@
         <div class="ball" role="img" aria-label="Illustration of a glowing crystal ball (concept art, placeholder)"><div class="ghost"></div></div>
         <div class="ball-stand" aria-hidden="true"></div>
       </div>
-      <p class="eyebrow">Working title · prototype</p>
-      <h1>Spirit Board: <span>The Séance</span></h1>
+      <p class="eyebrow">Prototype · nearly done</p>
+      <h1>Spirit Glass</h1>
+      <p class="tagline">A Tarot Game</p>
       <p class="hero-line">A Halloween party fortune-teller, powered by your phone.</p>
       <div class="btn-row">
         <a class="btn" href="#interest">Join the interest list</a>
@@ -58,10 +59,10 @@
       <p class="eyebrow">The ritual</p>
       <h2>How it works</h2>
       <ol class="ritual">
-        <li><span class="num">I</span><h3>Lay the cards</h3><p>Place RFID-equipped tarot cards into the slots on the board. The board knows which card is where.</p></li>
-        <li><span class="num">II</span><h3>Light the crystal ball</h3><p>Your phone's screen projects into the crystal ball using the Pepper's Ghost illusion — a classic stage trick with angled glass.</p></li>
-        <li><span class="num">III</span><h3>A spirit appears</h3><p>A 3D spirit avatar materialises inside the ball, ready to talk with you.</p></li>
-        <li><span class="num">IV</span><h3>Hear your reading</h3><p>The spirit gives your fortune reading in its own voice and personality.</p></li>
+        <li><span class="num">I</span><h3>Wake the board</h3><p>Power on the board. Your phone connects to it.</p></li>
+        <li><span class="num">II</span><h3>Ask your question</h3><p>Hold the Speak button and ask the spirits your question out loud.</p></li>
+        <li><span class="num">III</span><h3>Lay a card</h3><p>Place an RFID tarot card on the board.</p></li>
+        <li><span class="num">IV</span><h3>The spirit answers</h3><p>A spirit appears in the crystal ball and interprets your card. It may ask you a clarifying question — answer it, or interrupt whenever you like.</p></li>
       </ol>
     </div>
   </section>
@@ -69,13 +70,12 @@
   <section class="section spirits-band" id="spirits">
     <div class="wrap">
       <h2>Meet the spirits</h2>
-      <p class="lede">There are several spirit characters, each with its own personality and voice. Who they are is still a secret.</p>
+      <p class="lede">Three spirits wait in the glass. Each reads the cards in its own way.</p>
       <div class="grid grid--3">
-        <article class="spirit"><div class="sigil" aria-hidden="true">✶</div><h3><span class="tbd">[TBD — spirit name]</span></h3><p>Voice &amp; personality: <span class="tbd">[TBD — voice / LoRA]</span></p></article>
-        <article class="spirit"><div class="sigil" aria-hidden="true">☽</div><h3><span class="tbd">[TBD — spirit name]</span></h3><p>Voice &amp; personality: <span class="tbd">[TBD — voice / LoRA]</span></p></article>
-        <article class="spirit"><div class="sigil" aria-hidden="true">✦</div><h3><span class="tbd">[TBD — spirit name]</span></h3><p>Voice &amp; personality: <span class="tbd">[TBD — voice / LoRA]</span></p></article>
+        <article class="spirit"><div class="sigil" aria-hidden="true">✶</div><h3>Arthur</h3><p>Calm, guiding, patient.</p></article>
+        <article class="spirit"><div class="sigil" aria-hidden="true">☽</div><h3>Zorin</h3><p>Arcane, ritualistic.</p></article>
+        <article class="spirit"><div class="sigil" aria-hidden="true">✦</div><h3>Voss</h3><p>Sharp, observant, unsettling.</p></article>
       </div>
-      <p class="small muted">Number of spirits: <span class="tbd">[TBD]</span></p>
     </div>
   </section>
 
@@ -85,16 +85,16 @@
         <p class="eyebrow">Under the board</p>
         <h2>The tech, in plain English</h2>
         <ul class="tech">
-          <li><strong>The AI runs on your phone.</strong> Readings come from a lightweight language model that runs locally, on the device — it's designed for any phone with 4 GB of RAM or more.</li>
-          <li><strong>Each spirit is its own character.</strong> When you switch spirits, the app loads a different add-on for the model (a “LoRA”, which tunes its personality) and a different voice.</li>
-          <li><strong>The cards are real cards.</strong> Each tarot card carries an RFID tag, so the board can tell which cards you've laid down.</li>
-          <li><strong>The ghost is an illusion.</strong> Pepper's Ghost reflects your phone screen so the spirit seems to float inside the ball.</li>
+          <li><strong>Your phone is the brain.</strong> It runs the game and the spirits.</li>
+          <li><strong>The board reads the cards.</strong> Each tarot card has an RFID tag, so the board knows which card you placed.</li>
+          <li><strong>The spirit is an illusion.</strong> The image is projected into the crystal ball using Pepper's Ghost, a classic stage trick with angled glass.</li>
+          <li><strong>The AI runs on your phone.</strong> The spirits' readings are generated on the device itself.</li>
         </ul>
       </div>
       <div class="status-card" id="status">
         <h2>Status &amp; honest blocker</h2>
-        <p><strong>It works.</strong> After three years of development, the prototype has proven the idea.</p>
-        <p><strong>The hard part:</strong> manufacturing the cards. There isn't yet a reliable way to assemble the RFID tarot cards at scale.</p>
+        <p><strong>Nearly done.</strong> The board and the projector are finished.</p>
+        <p><strong>The hard part:</strong> building the cards. Right now about 1 in 5 attempts succeed.</p>
         <p><strong>Not for sale yet.</strong> No price, no ship date.</p>
         <p class="small">Know how to make RFID cards? Tick “I'm a maker” below — we'd love to hear from you.</p>
       </div>
@@ -104,31 +104,31 @@
   <section class="section section--tight party-band" id="party">
     <div class="wrap narrow">
       <h2>Made for Halloween parties</h2>
-      <p class="lede">Gather everyone around the board, dim the lights, and take turns with the spirits. It's a party gimmick built for group readings and good screams.</p>
+      <p class="lede">Gather everyone around the board, dim the lights, and take turns asking the spirits. It's a party gimmick built for group readings.</p>
       <p class="small muted">Readings are for entertainment only — no claim of real fortune-telling.</p>
     </div>
   </section>
 
   <section class="section interest-band" id="interest">
     <div class="wrap">
-      <h2>Join the interest list</h2>
+      <h2>Join the Spirit Glass interest list</h2>
       <p class="lede">Hear about progress, beta tests and — one day — launch.</p>
-      <form class="signup" name="tarot-interest" data-list="tarot-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success="The spirits have noted your name. We'll be in touch.">
-        <input type="hidden" name="form-name" value="tarot-interest">
-        <input type="hidden" name="list" value="tarot-interest">
+      <form class="signup" name="spirit-glass-interest" data-list="spirit-glass-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success="The spirits have noted your name. We'll be in touch.">
+        <input type="hidden" name="form-name" value="spirit-glass-interest">
+        <input type="hidden" name="list" value="spirit-glass-interest">
         <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="field"><label for="tr-name">Name <span class="small">(optional)</span></label><input id="tr-name" name="name" type="text" autocomplete="name"></div>
         <div class="field"><label for="tr-email">Email <span class="req" aria-hidden="true">*</span></label><input id="tr-email" name="email" type="email" autocomplete="email" required aria-describedby="tr-email-err"><div class="err" id="tr-email-err"></div></div>
         <fieldset><legend>I'm interested in…</legend>
           <label class="check"><input type="checkbox" name="interest" value="Updates"> I want updates</label>
           <label class="check"><input type="checkbox" name="interest" value="Beta tester"> I want to beta test</label>
-          <label class="check"><input type="checkbox" name="interest" value="Maker - can help with cards"> I'm a maker and can help with the cards</label>
+          <label class="check"><input type="checkbox" name="interest" value="Maker - can help with cards"> I'm a maker and can help with cards</label>
         </fieldset>
         <label class="check"><input type="checkbox" name="consent" value="yes" required aria-describedby="tr-consent-err"> <span>I agree to receive updates about this project. I can unsubscribe anytime. <span class="req" aria-hidden="true">*</span></span></label>
         <div class="err" id="tr-consent-err"></div>
         <button class="btn" type="submit">Summon updates</button>
         <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
-        <p class="privacy">Privacy: we collect your name (optional), email and interests — only to send updates about <em>Spirit Board: The Séance</em>. The list is never sold or shared.</p>
+        <p class="privacy">Privacy: we collect your name (optional), email and interests — only to send updates about <em>Spirit Glass</em>. The list is never sold or shared.</p>
       </form>
     </div>
   </section>
@@ -140,10 +140,10 @@
       <li><a href="../portfolio/">William McDonald — Portfolio</a></li>
       <li><a href="../prologue-cartridges/">From Beyond: Prologue — cartridges</a></li>
       <li><a href="../dinner-party/">From Beyond: The Dinner Party</a></li>
-      <li><a href="../tarot-reader/" aria-current="page">Spirit Board</a></li>
+      <li><a href="../tarot-reader/" aria-current="page">Spirit Glass</a></li>
     </ul>
     <p class="disclaimer"><strong>For entertainment only. Prototype in development — not for sale yet.</strong></p>
-    <p><em>Spirit Board: The Séance</em> is a working title. Original branding; not affiliated with any talking-board brand.</p>
+    <p>Original artwork and branding; not affiliated with any talking-board brand.</p>
     <p>© <span data-year>2026</span> William McDonald.</p>
     <p>Forms collect only name, email and interests, used for project updates. Never sold or shared.</p>
   </div>
