@@ -1,0 +1,40 @@
+# Deploys the static sites in /sites to GitHub Pages (free for public repos).
+name: Deploy sites to GitHub Pages
+
+on:
+  push:
+    branches: [claude/sharp-rubin-5medy5, main, master]
+    paths: ["sites/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check internal links
+        run: python3 scripts/check_links.py sites
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: sites
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}portfolio/
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
