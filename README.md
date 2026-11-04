@@ -15,7 +15,12 @@ This repo holds two things:
 
 Plain HTML/CSS/JS. **No build step, no dependencies, no database.**
 
-## Preview locally
+## Check & preview locally
+
+```bash
+python3 scripts/check_links.py sites
+```
+
 
 ```bash
 cd sites && python3 -m http.server 8000
@@ -23,23 +28,30 @@ cd sites && python3 -m http.server 8000
 
 Then open http://localhost:8000/portfolio/
 
-## Deploy free on Netlify (recommended — forms work automatically)
+## Deploy — pick ONE option
 
-1. Sign in at https://app.netlify.com (free, no card) → **Add new site → Import an existing project** → pick this GitHub repo. `netlify.toml` already sets the publish folder to `sites` with no build command. (Or drag the `sites/` folder onto https://app.netlify.com/drop.)
-2. After the first deploy, go to **Site configuration → Forms** and click **Enable form detection**, then redeploy once. Four forms appear: `portfolio-contact`, `prologue-cartridge-notify`, `dinner-party-beta`, `tarot-interest`.
-3. **Forms → Form notifications → Add notification → Email notification** → event “New form submission”, form “Any form”, email **w.arthur.mcdonald@gmail.com**. Each email's subject names the form, so the four lists stay separate.
-4. Send one test submission per form and check the inbox.
-5. Replace `https://YOUR-SITE.netlify.app` in `sites/sitemap.xml` and `sites/robots.txt` with the real URL.
+### Option A — Netlify (recommended: forms work with zero code changes)
+1. Sign in at https://app.netlify.com with your GitHub account (free, no card).
+2. **Add new site → Import an existing project → GitHub → Sciencetastic/Website.** Branch: the one this PR merges into. `netlify.toml` already sets publish folder `sites`, no build command. Click **Deploy**.
+3. **Site configuration → Forms → Enable form detection**, then **Deploys → Trigger deploy → Deploy site** once. Four forms appear: `portfolio-contact`, `prologue-cartridge-notify`, `dinner-party-beta`, `tarot-interest`.
+4. **Forms → Form notifications → Add notification → Email notification** → event *New form submission*, form *Any form*, email **w.arthur.mcdonald@gmail.com**. The email subject names the form, so the four lists stay separate.
+5. Send **one** test per form (4 total) and confirm each arrives.
+6. Replace `https://YOUR-SITE.netlify.app` in `sites/sitemap.xml` and `sites/robots.txt` with your real URL.
 
-URLs will be `https://<your-site>.netlify.app/portfolio/`, `/prologue-cartridges/`, `/dinner-party/`, `/tarot-reader/` (the root redirects to the portfolio).
+Live URLs: `https://<name>.netlify.app/portfolio/`, `/prologue-cartridges/`, `/dinner-party/`, `/tarot-reader/` (root redirects to the portfolio).
 
-If you later add a custom domain, set `NETLIFY_CUSTOM_DOMAIN: true` in `sites/shared/config.js`.
+### Option B — GitHub Pages (already wired up; forms need Formspree)
+The workflow `.github/workflows/pages.yml` checks every internal link and deploys `sites/` automatically.
+1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**. (This is the one step a workflow is not allowed to do for you.)
+2. Merge the PR into the default branch (or **Actions → "Sites — check & deploy" → Run workflow** on the default branch).
+3. Site goes live at **https://sciencetastic.github.io/Website/portfolio/** (and `/prologue-cartridges/`, `/dinner-party/`, `/tarot-reader/`).
+4. Forms: GitHub Pages can't receive form posts, so sign up free at https://formspree.io (no card), create 4 forms that email **w.arthur.mcdonald@gmail.com**, paste each form ID into `FORMSPREE_IDS` in `sites/shared/config.js`, commit. Then send one test per form.
+5. Replace `https://YOUR-SITE.netlify.app` in `sites/sitemap.xml` and `sites/robots.txt` with `https://sciencetastic.github.io/Website`.
 
-### Alternative: Formspree (works on any host, incl. GitHub Pages)
-Create 4 free forms at https://formspree.io pointed at w.arthur.mcdonald@gmail.com, paste each form ID into `FORMSPREE_IDS` in `sites/shared/config.js`, and set `MODE: "formspree"`.
+If you later put a custom domain on Netlify, set `NETLIFY_CUSTOM_DOMAIN: true` in `sites/shared/config.js`.
 
-### Fallback (what happens before either is set up)
-If no form service is connected, submitting a form opens the visitor's email app with a pre-filled message addressed to the project inbox and the list name in the subject (e.g. `[tarot-interest] sign-up from website`). This is a **fallback** — it relies on the visitor pressing Send.
+### Fallback (what happens before a form service is connected)
+Submitting opens the visitor's email app with a pre-filled message to the project inbox and the list name in the subject (e.g. `[tarot-interest] sign-up from website`). It works, but relies on the visitor pressing Send — so connect Netlify or Formspree before promoting the sites.
 
 ## Export subscriber lists (Netlify)
 1. Netlify dashboard → your site → **Forms**.
