@@ -68,3 +68,5 @@ body { background: var(--bg); }
 .signup .privacy { color: var(--muted); }
 .site-footer { background: #07080f; }
 a { color: #ff8a73; }
+
+.mag-link { text-align: center; margin-top: var(--s-5); }

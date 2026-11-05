@@ -21,4 +21,6 @@ Fetched / checked 2026-11-04 from the build environment. Public pages only; no l
 | LinkedIn | https://www.linkedin.com/in/williamamcdonald/ | Link only (not scraped) | per brief |
 | YouTube trailers | lnnMDmeCrvA, cAdgqs82PdI, -__Mq61Q32Y | Click-to-load embeds (youtube-nocookie) | per brief |
 
+| William's strategy-guide package `From_Beyond_Strategy_Guides_2026-11-04.zip` (supplied 2026-11-05) | supplied file | Port status (Genesis finished, 47 rooms; Game Boy finished, 104 scenes, 4-colour, battery saves; NES in development, 3-room slice), guide page counts (11/10/6), the Act I walkthrough excerpt, Golden Rule and tips, Steam 92% Very Positive (85 reviews), oprainfall 4.5/5, Friday Night Arcade quote, 21 screenshots | 2026-11-05 |
+
 **Deliberately NOT used:** Sleek's Steam App 1231990 link (wrong), old LinkedIn slug, the 2019 interview's Dinner Party roster, Unity as current engine, Mac/Xbox One for Dinner Party, Switch for Prologue, anything about the unrelated Kōtuku framework, the public Sleek mailto address.

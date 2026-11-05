@@ -9,6 +9,7 @@ This repo holds two things:
 |---|---|---|
 | Portfolio | `sites/portfolio/` | Morphable résumé: All / Corporate PM / Indie Game / Academic views (`?mode=pm`, `?mode=indie`, `?mode=academic`), one-click print-to-PDF résumé, contact form |
 | From Beyond: Prologue — cartridges | `sites/prologue-cartridges/` | Kickstarter notify list for the Nintendo / Genesis / Game Boy-GBC ports |
+| Pixel Expedition (Prologue magazine preview) | `sites/prologue-magazine/` | Retro game-magazine-style promo for the Genesis / Game Boy / NES boxed cartridges and their strategy guides; links to the Prologue notify list |
 | From Beyond: The Dinner Party | `sites/dinner-party/` | Sequel teaser + beta/demo sign-up |
 | Spirit Glass — A Tarot Game | `sites/tarot-reader/` | Tarot game prototype (RFID cards + phone-powered crystal ball) + interest list |
 | Shared | `sites/shared/` | `base.css` (design tokens + components), `site.js` (forms, video), `config.js` (form settings), `img/` |
