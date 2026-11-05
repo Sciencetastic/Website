@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# TBD — William to confirm: replace the domain below once the site is deployed
+Sitemap: https://YOUR-SITE.netlify.app/sitemap.xml

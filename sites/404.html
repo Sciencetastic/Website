@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — William McDonald</title>
+<meta name="description" content="This page could not be found.">
+<meta name="robots" content="noindex">
+<script>
+  // Works at a domain root (Netlify) and under a project path (GitHub Pages: /Website/).
+  (function () { var seg = location.pathname.split("/")[1];
+    var base = /\.github\.io$/.test(location.hostname) && seg ? "/" + seg + "/" : "/";
+    var b = document.createElement("base"); b.setAttribute("href", base); document.head.appendChild(b); })();
+</script>
+<link rel="stylesheet" href="shared/base.css">
+<style>:root{--bg:#0b0618;--fg:#efe7ff;--muted:#b9add6;--accent:#d4af37;--accent-fg:#1a1205;--border:#3a2a63}</style>
+</head>
+<body>
+<main class="wrap notfound">
+  <div>
+    <p class="eyebrow">404</p>
+    <h1>The spirits can't find that page.</h1>
+    <p class="muted">It may have moved, or the link was mistyped.</p>
+    <div class="btn-row" style="justify-content:center">
+      <a class="btn" href="portfolio/">Portfolio</a>
+      <a class="btn btn--ghost" href="prologue-cartridges/">Prologue cartridges</a>
+      <a class="btn btn--ghost" href="dinner-party/">The Dinner Party</a>
+      <a class="btn btn--ghost" href="tarot-reader/">Spirit Glass</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>

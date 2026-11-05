@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TBD — William to confirm: replace https://YOUR-SITE.netlify.app with the real deploy URL -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-SITE.netlify.app/portfolio/</loc></url>
+  <url><loc>https://YOUR-SITE.netlify.app/prologue-cartridges/</loc></url>
+  <url><loc>https://YOUR-SITE.netlify.app/prologue-magazine/</loc></url>
+  <url><loc>https://YOUR-SITE.netlify.app/dinner-party/</loc></url>
+  <url><loc>https://YOUR-SITE.netlify.app/tarot-reader/</loc></url>
+</urlset>

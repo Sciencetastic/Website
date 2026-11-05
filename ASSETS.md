@@ -1,0 +1,42 @@
+# ASSETS — every image / graphic on the 4 sites
+
+No AI-generated images were made in this run (no image generator was available, and the brief prefers real art + CSS/SVG). All "concept art" is hand-built CSS/SVG and is captioned on-page as placeholder.
+
+| File | Site/page | Source | Licence / permission | Size | Status |
+|---|---|---|---|---|---|
+| `sites/shared/img/prologue-header.jpg` | Portfolio (Indie games), og:image on Prologue/Portfolio/Dinner Party | Steam store header, App 971430 | SuckerFree Games' own store art — **William to confirm OK to reuse on his own sites** | 460×215, 33 KB | Verified source |
+| `sites/shared/img/prologue-ss1.jpg` | Prologue (hero background + “The game”) | Steam store screenshot, App 971430 | as above | 600×337, 121 KB | Verified source |
+| `sites/shared/img/prologue-ss2.jpg` | Prologue (screenshots row) | Steam store screenshot | as above | 600×337, 150 KB | Verified source |
+| `sites/shared/img/prologue-ss3.jpg` | Prologue (screenshots row) | Steam store screenshot | as above | 600×337, 139 KB | Verified source |
+| `sites/shared/img/draconus-header.jpg` | Portfolio (Indie games) | Steam store header, App 1108570 | SuckerFree Games' own store art — William to confirm | 460×215, 51 KB | Verified source |
+| Kobold's Quest title card (CSS `.art-kobold`) | Portfolio | CSS illustration | original | 0 KB | TEMP placeholder — replace with real key art |
+| Cartridge drawings ×3 (CSS `.cart--*`) | Prologue “Cartridge ports” | CSS illustration | original | 0 KB | TEMP placeholder, captioned “not photos of real hardware” |
+| Mansion + moon (inline SVG) | Dinner Party hero | SVG illustration | original | ~1 KB | TEMP placeholder, captioned “not in-game art” |
+| Talking-board, crystal ball, ghost, planchette (CSS) | Spirit Glass hero | CSS illustration | original (no Ouija/Hasbro marks) | 0 KB | TEMP placeholder, captioned “concept art… not the real product” |
+| `sites/prologue-magazine/img/g_briar.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 71 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_cages.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 62 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_car.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 62 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_forge_lit.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 60 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_mine_tunnel.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 62 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_old_man.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 59 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_pillars_beam.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 41 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_star_amulet.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 67 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_temple_door.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 50 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_title_full.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 58 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_tower_top.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 61 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/g_watchtower_wolf.jpg` | Pixel Expedition magazine | Sega Genesis frame (2026-11-04 playthrough capture), from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 53 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/gb_briar.png` | Pixel Expedition magazine | Game Boy background / emulator capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 7 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/gb_mine_entrance.png` | Pixel Expedition magazine | Game Boy background / emulator capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 5 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/gb_outside_watch_tower.png` | Pixel Expedition magazine | Game Boy background / emulator capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 5 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/gb_temple_entrance.png` | Pixel Expedition magazine | Game Boy background / emulator capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 5 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/nes_briar_bundle.png` | Pixel Expedition magazine | NES development-build capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 7 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/nes_briar_uncut.png` | Pixel Expedition magazine | NES development-build capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 7 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/nes_tools.png` | Pixel Expedition magazine | NES development-build capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 2 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/ui_car_bag.png` | Pixel Expedition magazine | Game Boy emulator capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 5 KB | Verified (real in-game screenshot) |
+| `sites/prologue-magazine/img/ui_title.png` | Pixel Expedition magazine | Game Boy emulator capture, from `From_Beyond_Strategy_Guides_2026-11-04.zip` (`assets/`) | SuckerFree Games' own game art, supplied by William | 5 KB | Verified (real in-game screenshot) |
+| Magazine masthead, starburst, barcode (CSS) | Pixel Expedition magazine | CSS | original (no Nintendo Power / Sega Visions marks) | 0 KB | Final |
+| Favicons (inline SVG data URIs) | all | original | original | <1 KB | Final unless William wants logos |
+
+Genesis frames were downscaled to 480 px (pixel-art upscaled in the browser). Pixel Expedition page total ≈ 770 KB, mostly lazy-loaded.
+
+Heaviest first load: Prologue page ≈ 440 KB of images (well under the 2 MB budget). Images are already small enough for mobile, so no separate mobile versions were needed.

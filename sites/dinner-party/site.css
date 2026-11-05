@@ -1,0 +1,54 @@
+/* The Dinner Party — candlelit gothic: oxblood, bone, brass. Neutral dark horror (Genesis styling not yet confirmed). */
+:root {
+  --bg: #140707; --fg: #efe6d6; --muted: #c2b3a0; --surface: #221010; --border: #4a2620;
+  --accent: #f2b84b; --accent-fg: #1a0a06; --focus: #ffe08a; --blood: #8f1d1d;
+  --font-display: var(--font-serif); --font-body: var(--font-serif);
+}
+body { font-size: 1.05rem; }
+.site-header { background: rgba(20, 7, 7, .9); }
+.brand { font-family: var(--font-serif); font-style: italic; letter-spacing: .02em; color: var(--accent); }
+.site-nav { font-family: var(--font-sans); }
+
+.hero { padding: var(--s-8) 0; background: radial-gradient(50rem 30rem at 20% 0%, #3a1010, transparent 70%), var(--bg); border-bottom: 1px solid var(--border); }
+.hero-grid { display: grid; gap: var(--s-6); align-items: center; }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: 1.1fr 1fr; } }
+.invite { font: italic var(--t-md) var(--font-serif); color: var(--accent); letter-spacing: .06em; margin-bottom: var(--s-2); }
+.hero h1 { font-size: var(--t-3xl); font-weight: 400; letter-spacing: -.01em; }
+.h1-pre { display: block; font-size: .42em; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--s-2); }
+.hero-art { margin: 0; }
+.hero-art svg { width: 100%; border: 1px solid var(--border); box-shadow: 0 30px 60px rgba(0,0,0,.6); }
+.btn { font-family: var(--font-sans); border-radius: 2px; }
+.btn--ghost { color: var(--fg); border-color: var(--muted); }
+.eyebrow { color: var(--accent); }
+
+.narrow { max-width: 50rem; }
+
+.status-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); counter-reset: step; }
+@media (min-width: 900px) { .steps { grid-template-columns: repeat(5, 1fr); } }
+.steps li { position: relative; padding: var(--s-4); border: 1px solid var(--border); background: var(--bg); font-size: var(--t-sm); }
+.steps strong { display: block; font-size: var(--t-base); margin-top: var(--s-1); }
+.step-when { font: 600 .75rem/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.steps .done { opacity: .75; }
+.steps .now { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 24px rgba(242, 184, 75, .25); }
+.steps .now .step-when { color: var(--accent); }
+
+.plat { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.plat li { padding: .4em .9em; border: 1px solid var(--accent); color: var(--accent); font-family: var(--font-sans); font-weight: 600; font-size: var(--t-sm); }
+.glance { padding-left: 1.1rem; }
+.glance li { margin-bottom: var(--s-3); }
+
+.guests-band { background: linear-gradient(180deg, var(--bg), #1d0a0a); }
+.guests { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: grid; gap: var(--s-3); grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+.guests li { padding: var(--s-4) var(--s-4); text-align: center; border: 1px solid var(--border); background: #f3eadb; color: #2a1410; font: italic var(--t-md) var(--font-serif);
+  box-shadow: inset 0 0 0 4px #f3eadb, inset 0 0 0 5px #b08d57; }
+
+.faq details { border-bottom: 1px solid var(--border); padding: var(--s-3) 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: var(--t-md); }
+.faq details p { margin: var(--s-3) 0 0; color: var(--muted); }
+
+.signup-band { background: var(--surface); border-top: 2px solid var(--blood); }
+.signup { font-family: var(--font-sans); }
+.signup input[type="text"], .signup input[type="email"] { background: #120505; border-color: var(--border); }
+.site-footer { font-family: var(--font-sans); }
+.tbd { font-family: var(--font-mono); }

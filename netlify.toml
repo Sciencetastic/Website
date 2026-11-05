@@ -1,0 +1,10 @@
+# Netlify: deploy the four static sites from /sites. No build step needed.
+[build]
+  publish = "sites"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
